@@ -1,0 +1,100 @@
+.header {
+    background-image: url('/../assets/background.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position-y: 52%;
+}
+
+.headerNav {
+    padding: 33px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .wrapper {
+        @include display(flex, space-between, center);
+        
+    }
+}
+
+.logo {
+    transition: all 0.5s;
+    img {
+        width: 70%;
+        
+    }
+}
+
+
+.headerList {
+    list-style: none;
+    @include display(flex, initial, center);
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    opacity: 1;
+    transition: all 1s;
+    li {
+        margin: 0 21px;
+        height: 100%;
+        
+    }
+}
+
+.navGone {
+    opacity: 0;
+}
+
+.navLink {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    height: 100%;
+    @include display(flex, initial, center);
+    transition: all 0.5s;
+    &:hover {
+        transform: translateY(7px);
+        color: $grey;
+    }
+}
+
+.navLinkScrollUp {
+    color: black;
+    &:hover {
+        color: $darkGrey;
+    }
+}
+
+
+
+.headerText {
+    height: 100%;
+}
+
+.headerTextFlex {
+    @include display(flex, center, center);
+    height: 70%;
+    // text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+}
+
+
+.laugh {
+    border-left: 0.5px $grey solid;
+    border-right: 0.5px $grey solid;
+
+}
+
+.tagWords {
+    padding: 0 20px;
+    display: inline-block;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.headerTextEffect {
+    transform: translateY(0px);
+    opacity: 1;
+}

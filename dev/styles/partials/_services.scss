@@ -1,0 +1,47 @@
+.servicesSection {
+    background-color: rgb(245, 244, 244);
+    padding-bottom: 10%;
+}
+
+.servicesContent {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.serviceBlock {
+    display: flex;
+    // margin-top: 20px;
+}
+
+.rightalign {
+    justify-content: flex-end;
+    .serviceName {
+        text-align: left;
+    }
+}
+
+.leftalign {
+    p {
+        text-align: right;
+    }
+}
+
+.serviceImage {
+    width: calc(33% - 40px);
+    margin: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.serviceText {
+    width: calc(60% - 40px);
+    margin: 20px;
+    @include display (flex, center, initial);
+    flex-direction: column;
+}

@@ -1,4 +1,6 @@
+let scrolling = false;
 
+let previousScroll = 0;
 
 const app = {}
 
@@ -58,8 +60,90 @@ let after_form_submitted = function (data) {
     // }// end of else
 }
 
+
+// scroll event 
+app.scrollingEvent = () => {
+    $(window).scroll(function () {
+        scrolling = true;
+
+    })
+}
+
+app.scrollUpNav = function () {
+
+    let headerTop = $("header").offset().top;
+    let headerBottom = $("header").offset().top + $("header").outerHeight();
+    let screenBottom = $(window).scrollTop() + window.innerHeight;
+    let screenTop = $(window).scrollTop();
+
+    let currentScroll = $(window).scrollTop();
+
+    //scrolling up 
+    if (currentScroll < previousScroll) {
+        //and header is in view
+        if (screenBottom > headerTop && screenTop < headerBottom) {
+            $('.logo').removeClass('navGone');
+            $('.headerList').removeClass('navGone');
+            $('.navLink').removeClass('navLinkScrollUp');
+        }
+
+        // header is not in view
+        else {
+            $('.navLink').addClass('navLinkScrollUp');
+            $('.headerList').removeClass('navGone');
+            
+        }
+    }
+
+    //scrolling down
+    if (currentScroll > previousScroll) {
+        // header is in view
+        if ((screenBottom > headerTop) && (screenTop < headerBottom)) {
+            $('.logo').addClass('navGone');
+            $('.headerList').addClass('navGone');
+        }
+
+        // header is not in view
+        else {
+            $('.logo').addClass('navGone');
+            $('.navLink').removeClass('navLinkScrollUp');
+            $('.headerList').addClass('navGone');
+        }// end of else header is not in view
+    } // end of scrolling down
+
+    previousScroll = currentScroll;
+
+}
+
+app.scrollEffects = function () {
+    setInterval(function () {
+        if (scrolling = true) {
+            scrolling = false;
+            // app.appearOnScroll();
+            app.scrollUpNav();
+        } // end of if scrolling
+    }, 250) // end of interval
+};
+
+
+// making 'move laugh play' animated
+app.headerTextEffect = () => {
+    setTimeout(()=> {
+        $('.move').addClass('headerTextEffect');
+    }, 200);
+    setTimeout(() => {
+        $('.laugh').addClass('headerTextEffect');
+    }, 300);
+    setTimeout(() => {
+        $('.play').addClass('headerTextEffect');
+    }, 400);
+}
+
 app.init = () => {
     app.submitForm();
+    app.scrollingEvent();
+    app.headerTextEffect();
+    app.scrollEffects();
 }
 
 $(function(){

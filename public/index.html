@@ -13,69 +13,93 @@
 </head>
 <body>
 
-    <header>
-        <div class="headerText">
-            <p aria-label="tagline" class="--headerSize --bodyFont ">Move <span class="--dotSize">●</span> Laugh <span class="--dotSize">●</span> Play</p>
-        </div>
+    <header class="header">
+        
 
         <!-- nav bar  -->
         <nav class="headerNav">
             <div class="wrapper">
                 <div class="logo">
                     <h1 class="visuallyhidden">The Hip Joint</h1>
-                    <img src="assets/logo.png" alt="The Hip Joint logo, that uses the end of a femur to create the letter 'p' in it" class="headerLogo">
+                    <img src="assets/whiteLogo.png" alt="The Hip Joint logo, that uses the end of a femur to create the letter 'p' in it" class="headerLogo">
                 </div>
-                <ul class="headerList --bodyFont ">
-                    <li>services</li>
-                    <li>meet the team</li>
-                    <li>blog</li>
-                    <li>contact</li>
+                <ul class="headerList --bodyFont --navSize">
+                    <li><a class="navLink" href="#services">services</a></li>
+                    <li><a class="navLink" href="#about">meet the team</a></li>
+                    <li><a class="navLink" href="">blog</a></li>
+                    <li><a class="navLink" href="#contact">contact</a></li>
                 </ul>
             </div><!-- end of wrapper-->
         </nav><!--end of nav bar-->
+
+        <div class="headerText">
+            <div class="headerTextFlex">
+                <p aria-label="tagline" class="--headerSize --bodyFont "><span class="tagWords move">move</span><span class="laugh tagWords">laugh</span><span class="tagWords play">play</span></p>
+            </div><!-- end of headerTextFlex-->
+        </div><!-- end of headerText-->
     </header>
 
     <main>
 
         <!-- SERVICES SECTION -->
 
-        <section class="servicesSection">
+        <section class="servicesSection" id="services">
             <div class="wrapper">
                 <h2 class=" --bodyFont ">services</h2>
-                <div class="servicesText">
+                <div class="servicesContent">
 
                     <!-- CHIRO, PHYSIO, MASSAGE -->
-                    <div class="serviceBlock">
-                        <p class=" --bodyFont --bodySize serviceName">Chiro, Physio and Massage</p>
-                        <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Chiropractors and Physiotherapists are specialists in the connection of your muscles, bones and joint to the nerves around
-                        it. They work closely with our Registered Massage Therapists to get you moving and out of pain.</p>
-                        <img src="https://picsum.photos/300/300?image=1062" alt="">
-                    </div>
+                    <div class="serviceBlock leftalign">
+                        <div class="serviceText">
+                            <p class=" --bodyFont --bodySize serviceName --bold">Chiro, Physio and Massage</p>
+                            <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Chiropractors and Physiotherapists are specialists in the connection of your muscles, bones and joint to the nerves around
+                            it. They work closely with our Registered Massage Therapists to get you moving and out of pain.</p>
+                        </div><!-- end of serviceText-->
+                        <div class="serviceImage">
+                            <img src="assets/massage.jpg" alt="">
+                        </div><!-- end of serviceImage-->
+                    </div><!-- end of serviceBlock-->
+
 
                     <!-- ACUPUNTURE, LASER, ETC -->
-                    <div class="serviceBlock">
-                        <img src="https://picsum.photos/300/300?image=1062" alt="">
-                        <p class=" --bodyFont --bodySize serviceName">Acupuncture, LASER, etc.</p>
-                        <p class=" --bodyFont --bodySize --darkGrey serviceDescription">We have both Traditional Chinese Medicine and Biomedical approaches available. LASER, when used at the right time, accelerates
-                        recovery. Cupping boosts your energy and increases muscle recovery.</p>
-                    </div>
+                    <div class="serviceBlock rightalign">
+                        <div class="serviceImage">
+                            <img src="assets/acu.jpg" alt="">
+                        </div><!-- end of serviceImage-->
+                        <div class="serviceText">
+                            <p class=" --bodyFont --bodySize serviceName --bold">Acupuncture, LASER, etc.</p>
+                            <p class=" --bodyFont --bodySize --darkGrey serviceDescription">We have both Traditional Chinese Medicine and Biomedical
+                            approaches available. LASER, when used at the right time, accelerates recovery. Cupping boosts your energy and increases muscle recovery.</p>
+                        </div><!-- end of serviceText-->  
+                    </div><!--end of serviceBlock-->
+
 
                     <!-- ORTHOTICS, STOCKINGS, TAPING -->
-                    <div class="serviceBlock">
-                        <p class=" --bodyFont --bodySize serviceName">Orthotics, Stockings, Taping</p>
-                        <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Give yourself the home care advantage. Our orthotic insoles and compression stocking are custom. Taping can help to accelerate
-                        recovery and your return to play.</p>
-                        <img src="https://picsum.photos/300/300?image=1062" alt="">
-                    </div>
+                    <div class="serviceBlock leftalign">
+                        <div class="serviceText">
+                            <p class=" --bodyFont --bodySize serviceName --bold">Orthotics, Stockings, Taping</p>
+                            <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Give yourself the home care advantage. Our orthotic insoles and compression stocking are custom. Taping can help to accelerate
+                            recovery and your return to play.</p>
+                        </div><!-- end of serviceText-->
+                        <div class="serviceImage">
+                            <img src="assets/tape.jpg" alt="">
+                        </div><!-- end of serviceImage-->
+                    </div><!-- end of serviceBlock-->
+
 
                     <!-- NUTRITION -->
-                    <div class="serviceBlock">
-                        <img src="https://picsum.photos/300/300?image=1062" alt="">
-                        <p class=" --bodyFont --bodySize serviceName">Nutrition</p>
-                        <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Our nutrition and supplementation specialists will assess your health holistically and personally guide you through your
-                        nutritional plan. We also carry a number of reliable nutritional supplement products.</p>
-                    </div>
-                </div><!-- end of servicesText-->
+                    <div class="serviceBlock rightalign">
+                        <div class="serviceImage">
+                            <img src="assets/nutrition.jpg" alt="">
+                        </div><!-- end of serviceImage-->
+                        <div class="serviceText">
+                            <p class=" --bodyFont --bodySize serviceName --bold">Nutrition</p>
+                            <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Our nutrition and supplementation specialists will assess
+                            your health holistically and personally guide you through your nutritional plan. We also carry a number of reliable nutritional supplement products.</p>
+                        </div><!-- end of serviceText-->
+                    </div><!-- end of serviceBlock-->
+
+                </div><!-- end of servicesContent-->
             </div><!-- end of wrapper-->
         </section><!-- end of servicesSection-->
 
@@ -83,34 +107,33 @@
 
         <!-- ABOUT US SECTION -->
 
-        <section class="aboutSection">
+        <section class="aboutSection" id="about">
             <div class="wrapper">
                 <h2 class="--bodyFont">Meet the team</h2>
                 <div class="aboutImages">
-                    <a href="" class="teamImage vision">
+                    <a href="" class="teamImage " data-src="vision">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
-                    <a href="" class="teamImage martin">
+                    <a href="" class="teamImage " data-src="martin">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
-                    <a href="" class="teamImage amy">
+                    <a href="" class="teamImage" data-src="amy">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
-                    <a href="" class="teamImage flavio">
+                    <a href="" class="teamImage " data-src="flavio">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
-                    <a href="" class="teamImage aliona">
+                    <a href="" class="teamImage " data-src="aliona">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
-                    <a href="" class="teamImage janee">
+                    <a href="" class="teamImage" data-src="janee">
                         <img src="https://picsum.photos/300/300?image=1025" alt="">
                     </a>
                 </div>
                 <div class="aboutContent">
 
                      <!-- OUR VISION -->
-                    <div class="aboutBlock vision">
-                        <img src="https://picsum.photos/300/300?image=1025" alt="">
+                    <div class="aboutBlock " data-src="vision">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Our Vision</h3>
                             <div class="visionBlocks">
@@ -127,8 +150,7 @@
                                 <div class="visionText">
                                     <p class="--bodyFont --bodySize --bold">Fine Tuning the Body</p>
                                     <p class="--bodyFont --bodySize --darkGrey">Many performing artists are perfectionists in their craft. Our practitioners use their skills to help them to optimize a
-                                    players's movement.
-</p>
+                                    players's movement.</p>
                                 </div>
                             </div>
                         </div><!-- end of aboutText-->
@@ -136,7 +158,7 @@
 
 
                     <!-- MARTIN LAI -->
-                    <div class="hideTeam aboutBlock martin">
+                    <div class="hideTeam aboutBlock" data-src="martin">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Martin Lai <span class="cred">BPHE, DC</span></h3>
                             <h4 class="--bodyFont">Chiropractor, Acupuncture Provider, Kinesiologist</h4>
@@ -193,7 +215,7 @@
 
 
                     <!-- AMY CHAN -->
-                    <div class="hideTeam aboutBlock amy">
+                    <div class="hideTeam aboutBlock" data-src="amy">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Dr. Amy Chan<span class="cred">H.B.Sc., D.C.</span></h3>
                             <h4 class="--bodyFont">Chiropractor ​Traditional Chinese Medicine Acupuncture Provider</h4>
@@ -248,7 +270,7 @@
 
 
                     <!-- FLAVIO MISURACA -->
-                    <div class="hideTeam aboutBlock flavio">
+                    <div class="hideTeam aboutBlock" data-src="flavio">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Flavio Misuraca<span class="cred">R.M.T.</span></h3>
                             <h4 class="--bodyFont">Registered Massage Therapist</h4>
@@ -300,7 +322,7 @@
 
 
                     <!-- ALIONA CIOBANU -->
-                    <div class="hideTeam aboutBlock aliona">
+                    <div class="hideTeam aboutBlock" data-src="aliona">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Aliona Ciobanu<span class="cred">B.Sc., R.N., R.H.N.</span></h3>
                             <h4 class="--bodyFont">Registered Nurse, Registered Holistic Nutritionist, Biochemist</h4>
@@ -350,7 +372,7 @@
                 
 
                     <!-- JANEE WONGTHONG -->
-                    <div class="hideTeam aboutBlock janee">
+                    <div class="hideTeam aboutBlock" janee>
                         <div class="aboutText">
                             <h3 class="--bodyFont">Janee Wongthong<span class="cred">R.M.T.</span></h3>
                             <h4 class="--bodyFont">Registered Massage Therapist</h4>
@@ -407,7 +429,7 @@
 
         <!-- CONTACT SECTION -->
 
-        <section class="contactSection">
+        <section class="contactSection" id="contact">
             <div class="wrapper">
                 <h2 class="--bodyFont">Contact Us</h2>
 
@@ -417,8 +439,13 @@
                         <ul class="contactList --bodyFont --bodySize">
                             <li><span class="--bold">Phone: </span>(416) 461-4227</li>
                             <li><span class="--bold">Location: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</li>
-                            <li class="contactSocialMedia"><a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank"><img src="assets/facebook.svg" aria-hidden="true"></a></li>
-                            <li class="contactSocialMedia"><a aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank"><img src="assets/instagram.svg" aria-hidden="true"></a></li>
+                            <li class="contactSocialMedia">
+                                <a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
+                                    <img src="assets/facebook.svg" aria-hidden="true" class="contactFB"></a></li>
+
+                            <li class="contactSocialMedia">
+                                <a aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
+                                    <img class="contactInsta" src="assets/instagram.svg" aria-hidden="true"></a></li>
                         </ul>
                     </div>
 
@@ -511,7 +538,18 @@
 
     <!-- FOOTER -->
 
-    footer>div.wrapper>
+    <footer>
+        <div class="wrapper">
+            <img src="assets/whiteLogo.png" alt="">
+            <div class="footerIcons">
+                <a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
+                    <img class="footerFB" src="assets/facebook.svg" aria-hidden="true"></a>
+
+                <a aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
+                    <img class="footerInsta" src="assets/instagram.svg" aria-hidden="true"></a>
+            </div>
+        </div>
+    </footer>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src="scripts/script.js"></script>
