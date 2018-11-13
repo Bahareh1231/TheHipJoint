@@ -16,13 +16,13 @@ app.submitForm = function() {
         });
         after_form_submitted();
 
-        // $.ajax({
-        //     type: "POST",
-        //     url: 'handler.php',
-        //     data: $form.serialize(),
-        //     success: after_form_submitted,
-        //     dataType: 'JSON'
-        // });
+        $.ajax({
+            type: "POST",
+            url: 'handler.php',
+            data: $form.serialize(),
+            success: after_form_submitted,
+            dataType: 'JSON'
+        });
 
     });
     
