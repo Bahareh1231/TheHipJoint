@@ -1,0 +1,79 @@
+html {
+    font-size: 16px;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+.--bodyFont {
+    font-family: $bodyFont;
+}
+
+.--bold {
+    font-weight: 700;
+}
+
+//font colors
+.--grey {
+    color: $grey;
+}
+
+.--darkGrey {
+    color: $darkGrey;
+}
+
+.--orange {
+    color: $orange;
+}
+
+.--purple {
+    color: $purple;
+}
+
+.--yellow {
+    color: $yellow;
+}
+
+.--green {
+    color: $green;
+}
+
+.--pink {
+    color: $pink;
+}
+
+// font sizes
+.--navSize {
+    font-size: 1rem;
+}
+
+.--headerSize {
+    font-size: 2.5rem;
+}
+
+.--dotSize {
+    font-size: 1rem;
+}
+
+.--bodySize {
+    font-size: 1.25rem;
+}
+
+.--subHeaderSize {
+    font-size: 2rem;
+}

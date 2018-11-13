@@ -52,6 +52,13 @@ gulp.task('html', () => {
 
 });
 
+gulp.task('php', () => {
+    return gulp.src('./dev/*.php')
+        .pipe(gulp.dest('./public/scripts'))
+        .pipe(reload({ stream: true }));;
+
+});
+
 
 gulp.task('bs', () => {
     browserSync.init({
@@ -91,6 +98,6 @@ gulp.task('images', function () {
 });
 
 
-gulp.task('build', ['html', 'styles', 'js']);
+gulp.task('build', ['html', 'styles', 'js', 'php']);
 
 gulp.task('default', ['bs', 'styles', 'js', 'html', 'watch']);
