@@ -9,6 +9,10 @@ html {
     margin: 0 auto;
 }
 
+img {
+    width: 100%;
+}
+
 body {
     position: relative;
     z-index: 10;
@@ -25,11 +29,13 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.95rem;
+    text-align: center;
 }
 
 h4 {
     font-size: 1.4rem;
+    text-align: center;
 }
 
 .--bodyFont {

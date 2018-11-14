@@ -3,6 +3,7 @@
     background-size: cover;
     height: 100vh;
     background-position-y: 52%;
+    background-attachment: fixed;
 }
 
 .headerNav {
@@ -10,6 +11,7 @@
     position: fixed;
     width: 100%;
     z-index: 100;
+    transition: all 0.5s;
     .wrapper {
         @include display(flex, space-between, center);
         
@@ -18,8 +20,9 @@
 
 .logo {
     transition: all 0.5s;
+    width: 20%;
     img {
-        width: 70%;
+        width: 100%;
         
     }
 }
@@ -43,6 +46,9 @@
 
 .navGone {
     opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    z-index: 5;
 }
 
 .navLink {
@@ -73,7 +79,7 @@
 
 .headerTextFlex {
     @include display(flex, center, center);
-    height: 70%;
+    height: 75%;
     // text-transform: uppercase;
     letter-spacing: 3px;
     color: white;

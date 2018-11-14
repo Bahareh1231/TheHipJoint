@@ -2,6 +2,15 @@ let scrolling = false;
 
 let previousScroll = 0;
 
+//smooth scrolling
+
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+    }, 600, 'swing');
+});
+
 const app = {}
 
 app.submitForm = function() {
@@ -85,13 +94,14 @@ app.scrollUpNav = function () {
             $('.logo').removeClass('navGone');
             $('.headerList').removeClass('navGone');
             $('.navLink').removeClass('navLinkScrollUp');
+            $('.headerNav').removeClass('navGone');
         }
 
         // header is not in view
         else {
             $('.navLink').addClass('navLinkScrollUp');
             $('.headerList').removeClass('navGone');
-            
+            $('.headerNav').removeClass('navGone');
         }
     }
 
@@ -108,6 +118,7 @@ app.scrollUpNav = function () {
             $('.logo').addClass('navGone');
             $('.navLink').removeClass('navLinkScrollUp');
             $('.headerList').addClass('navGone');
+            $('.headerNav').addClass('navGone');
         }// end of else header is not in view
     } // end of scrolling down
 
@@ -139,11 +150,52 @@ app.headerTextEffect = () => {
     }, 400);
 }
 
+// to view different team members 
+app.viewTeam = function() {
+    $('.teamImage').on('click', function(e){
+        e.preventDefault();
+        $('.showTeam').addClass('fade');
+        setTimeout(() => {
+            $('.showTeam').removeClass('showTeam');
+        }, 200)
+
+        // hide overlay on selected item
+        $('.hideOverlay').removeClass('hideOverlay');
+
+        let removeOverlay = $(this).find('.imageOverlay');
+        $(removeOverlay).addClass('hideOverlay');
+
+        // show the bio of the selected person
+        let clickedPerson = $(this).data('src');
+        
+        let openProfile = $('.aboutContent').find('.aboutBlock');
+
+        $.each(openProfile, function (index, value) {
+
+            let name = ($(value).attr('data-src'));
+
+            if (clickedPerson === name) {
+                $(value).addClass('fade')
+                setTimeout(() => {
+                    $(value)
+                        .addClass('showTeam')
+                        .removeClass('fade');
+                    $('html, body').animate({
+                        scrollTop: $('.showTeam').offset().top
+                    }, 600, 'swing');
+                },200)
+                
+            }// end of ternary operator 
+        })// end of loop
+    })// end of event
+}
+
 app.init = () => {
     app.submitForm();
     app.scrollingEvent();
     app.headerTextEffect();
     app.scrollEffects();
+    app.viewTeam();
 }
 
 $(function(){
