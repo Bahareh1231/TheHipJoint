@@ -235,6 +235,9 @@ h4 {
     justify-content: space-between;
     align-items: center; }
 
+.navOverlay {
+  background-color: rgba(0, 0, 0, 0.2); }
+
 .logo {
   transition: all 0.5s;
   width: 20%; }
@@ -493,7 +496,80 @@ h4 {
   border: 4px solid #818181;
   align-self: center;
   padding: 20px;
+  width: 60%;
   background-color: #f5f4f4; }
+  .form:focus-within input {
+    border: 1px solid black; }
+  .form:focus-within textarea {
+    border: 1px solid black; }
+
+.formForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+
+.formQuestion input,
+.formQuestion textarea {
+  padding: 7px;
+  background: #f5f4f4;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid black; }
+
+.formQuestion {
+  width: calc(50% - 10px);
+  margin-right: 10px; }
+  .formQuestion input {
+    margin-top: 10px; }
+  .formQuestion textarea {
+    height: 100%; }
+
+.checkBoxes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+
+.formCheckbox {
+  display: flex;
+  justify-content: initial;
+  align-items: initial;
+  flex-direction: column;
+  width: 50%; }
+  .formCheckbox input {
+    display: none; }
+    .formCheckbox input:checked + label {
+      font-weight: 700; }
+  .formCheckbox label {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    display: inline-block; }
+    .formCheckbox label:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: #818181;
+      transition: all 0.3s; }
+    .formCheckbox label:hover {
+      cursor: pointer; }
+      .formCheckbox label:hover:after {
+        content: '';
+        display: block;
+        width: 20%;
+        height: 2px;
+        background-color: #818181; }
+
+.button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #fffefe;
+  border: 2px solid black;
+  color: black;
+  margin-top: 20px;
+  transition: all 0.5s; }
+  .button:hover {
+    background-color: black;
+    color: white; }
 
 .footer {
   background-color: black;
@@ -515,4 +591,7 @@ h4 {
   .footerIcons img {
     height: 50px;
     width: 50px;
-    margin-left: 10px; }
+    margin-left: 10px;
+    transition: all 0.3s; }
+    .footerIcons img:hover {
+      transform: scale(1.1); }

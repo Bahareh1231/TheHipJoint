@@ -61,7 +61,97 @@
     border: 4px solid $darkGrey;
     align-self: center;
     padding: 20px;
+    width: 60%;
     background-color: rgb(245, 244, 244);
+    &:focus-within input{
+        border: 1px solid black;
+    }
+    &:focus-within textarea {
+        border: 1px solid black;
+    }
+}
+
+.formForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.formQuestion input,
+.formQuestion textarea {
+    padding: 7px;
+    background: rgb(245, 244, 244);
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+
+
+.formQuestion {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    input {
+        margin-top: 10px;
+    }
+    textarea {
+        height: 100%;
+    }
+}
+
+.checkBoxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.formCheckbox {
+    @include display (flex, initial, initial);
+    flex-direction: column;
+    width: 50%;
+    input {
+        display: none;
+        &:checked + label {
+            font-weight: 700;
+        }
+    }
+    label {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        display: inline-block;
+        &:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background-color: $darkGrey;
+            transition: all 0.3s;
+        }
+        &:hover {
+            cursor: pointer;
+            &:after {
+                content: '';
+                display: block;
+                width: 20%;
+                height: 2px;
+                background-color: $darkGrey;
+            }
+        }
+    }
+}
+
+.button {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: rgb(255, 254, 254);
+    border: 2px solid black;
+    color: black;
+    margin-top: 20px;
+    transition: all 0.5s;
+    &:hover {
+        background-color: black;
+        color: white; 
+    }
 }
 
 // footer 
@@ -86,5 +176,9 @@
         height: 50px;
         width: 50px;
         margin-left: 10px;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

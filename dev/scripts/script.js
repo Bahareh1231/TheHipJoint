@@ -94,14 +94,16 @@ app.scrollUpNav = function () {
             $('.logo').removeClass('navGone');
             $('.headerList').removeClass('navGone');
             $('.navLink').removeClass('navLinkScrollUp');
-            $('.headerNav').removeClass('navGone');
+            $('.headerNav').removeClass('navGone navOverlay');
         }
 
         // header is not in view
         else {
             $('.navLink').addClass('navLinkScrollUp');
             $('.headerList').removeClass('navGone');
-            $('.headerNav').removeClass('navGone');
+            $('.headerNav')
+                .removeClass('navGone')
+                .addClass('navOverlay');
         }
     }
 

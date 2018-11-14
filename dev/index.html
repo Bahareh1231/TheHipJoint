@@ -469,77 +469,66 @@
                     <div class="form">
                         <!-- Form Started -->
                     
-                        <form id="formBody" action="handler.php" method="POST">
-                            <div class="formQuestion --bodyFont --bodySize">
-                                <label for="name">Name</label>
-                                <input id="name" type="text" name="name" class="form-control" placeholder="Your Name (required)" required>
+                        <form id="formBody" action="handler.php" method="POST" class="formForm">
+                            <div class="formQuestion --bodyFont --formSize">
+                                <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name" required>
+                                <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control" placeholder="Email" required>
+                                <input aria-label="enter your phone number" id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number">
                             </div>
-                            <div class="formQuestion --bodyFont --bodySize">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" name="email" class="form-control" placeholder="Your Email (required)" required>
-                            </div>
-                            <div class="formQuestion --bodyFont --bodySize">
-                                <label for="phone">Phone Number</label>
-                                <input id="phone" type="tel" name="phone" class="form-control" placeholder="Your Phone Number">
-                            </div>
-                            <!-- preferred day of the week -->
-                            <div class="formQuestion --bodyFont --bodySize">
-                                <p class="--bodyFont --bodySize">Preferred Day of the Week:</p>
-                                <input type="checkbox" name="day[]" value="monday" id="monday">
-                                <label class="--bodyFont --bodySize" for="monday">Monday</label>
+
+                            <div class="formQuestion --bodyFont --formSize">
+                                <textarea aria-label="any additional messages" rows="4" type="text" id="message"  resize="none" name="message" class="form-control" placeholder="Additional notes"></textarea>
+                            </div><!-- end of message area-->
+
+                            <div class="checkBoxes">
+                                <!-- preferred day of the week -->
+                                <div class="formCheckbox --bodyFont --formSize">
+                                    <p class="--bodyFont --bodySize">Preferred Day of the Week:</p>
+                                    <input type="checkbox" name="day[]" value="monday" id="monday">
+                                    <label class="--bodyFont" for="monday">Monday</label>
+                        
+                                    <input type="checkbox" name="day[]" value="tuesday" id="tuesday">
+                                    <label class="--bodyFont" for="tuesday">Tuesday</label>
+                        
+                                    <input type="checkbox" name="day[]" value="wednesday" id="wednesday">
+                                    <label class="--bodyFont" for="wednesday">Wednesday</label>
+                        
+                                    <input type="checkbox" name="day[]" value="thursday" id="thursday">
+                                    <label class="--bodyFont" for="thursday">Thursday</label>
+                        
+                                    <input type="checkbox" name="day[]" value="friday" id="friday">
+                                    <label class="--bodyFont" for="friday">Friday</label>
+                                </div>
+                                <!-- preferred time of day -->
+                                <div class="formCheckbox --formSize">
+                                    <p class="--bodyFont --bodySize">Preferred Time of Day:</p>
+                                    <input type="checkbox" name="time[]" value="morning" id="morning">
+                                    <label for="morning" class="--bodyFont ">Morning 9:00am - 12:00pm</label>
+                        
+                                    <input type="checkbox" name="time[]" value="afternoon" id="afternoon">
+                                    <label for="afternoon" class="--bodyFont ">Afternoon 12:01pm - 4:00pm</label>
+                        
+                                    <input type="checkbox" name="time[]" value="evening" id="evening">
+                                    <label for="evening" class="--bodyFont ">Evening 4:00pm - 7:00pm</label>
+                                </div>
+                            </div><!-- end of checkBoxes-->
                     
-                                <input type="checkbox" name="day[]" value="tuesday" id="tuesday">
-                                <label class="--bodyFont --bodySize" for="tuesday">Tuesday</label>
-                    
-                                <input type="checkbox" name="day[]" value="wednesday" id="wednesday">
-                                <label class="--bodyFont --bodySize" for="wednesday">Wednesday</label>
-                    
-                                <input type="checkbox" name="day[]" value="thursday" id="thursday">
-                                <label class="--bodyFont --bodySize" for="thursday">Thursday</label>
-                    
-                                <input type="checkbox" name="day[]" value="friday" id="friday">
-                                <label class="--bodyFont --bodySize" for="friday">Friday</label>
-                            </div>
-                            <!-- preferred time of day -->
-                            <div class="formQuestion ">
-                                <p class="--bodyFont --bodySize">Preferred Time of Day</p>
-                                <input type="checkbox" name="time[]" value="morning" id="morning">
-                                <label for="morning" class="--bodyFont --bodySize">Morning 9:00a - 12:00pm</label>
-                    
-                                <input type="checkbox" name="time[]" value="afternoon" id="afternoon">
-                                <label for="afternoon" class="--bodyFont --bodySize">Afternoon 12:01pm - 4:00pm</label>
-                    
-                                <input type="checkbox" name="time[]" value="evening" id="evening">
-                                <label for="evening" class="--bodyFont --bodySize">Evening 4:00pm - 7:00pm</label>
-                            </div>
-                    
-                            <div class="formQuestion --bodyFont --bodySize">
-                                <label for="message">Message</label>
-                                <textarea id="message" rows="3" cols="10" name="message" class="form-control" placeholder="Additional notes"></textarea>
-                            </div>
+                            
                     
                     
                             <div class="form-group">
-                                <button class="btn btn-raised btn-block btn-danger">Submit</button>
+                                <button class="button --bodyFont">Submit</button>
                             </div>
-                            <?php include 'handler.php' ;?>
                         </form>
-                        <div id="error_message" style="width:100%; height:100%; display:none; ">
-                            <h4>Error</h4>
-                            Sorry there was an error sending your form.
-                        </div>
-                        <div id="success_message" style="width:100%; height:100%; display:none; ">
-                            <h2>Success! Your Message was Sent Successfully.</h2>
-                        </div>
-                    
                         <!-- Form Ended -->
+
                     </div><!-- end of form-->
                 </div><!-- end of contactContent-->
             </div><!-- end of wrapper-->
         </section><!-- end of contactSection-->
 
         
-    </main>
+    </main><!-- end of main-->
 
     <!-- FOOTER -->
 
