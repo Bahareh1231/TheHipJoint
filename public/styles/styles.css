@@ -390,6 +390,24 @@ h4 {
   display: block;
   opacity: 1; }
 
+.martin:hover {
+  border: 3px solid #DA8044; }
+
+.amy:hover {
+  border: 3px solid #B073DA; }
+
+.flavio:hover {
+  border: 3px solid #c6ad5c; }
+
+.aliona:hover {
+  border: 3px solid #91E05C; }
+
+.janee:hover {
+  border: 3px solid #E889E0; }
+
+.vision:hover {
+  border: 3px solid #ccd6dc; }
+
 .visionBlocks {
   display: flex;
   justify-content: space-between;
@@ -414,7 +432,7 @@ h4 {
 .trained,
 .certed {
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   padding: 0; }
   .trained li,
   .certed li {
@@ -422,3 +440,79 @@ h4 {
 
 .fade {
   opacity: 0; }
+
+.contactSection {
+  padding-bottom: 10%; }
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.contactInfo {
+  margin: 10px;
+  width: calc(50% - 20px);
+  align-self: center; }
+
+.contactList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+  flex-wrap: wrap; }
+  .contactList p {
+    margin: 10px 0; }
+
+.details {
+  width: 100%; }
+
+.socialMediaBlock {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: initial; }
+  .socialMediaBlock img {
+    height: 50px;
+    width: 50px; }
+
+.contactSocialMedia {
+  margin-right: 10px;
+  transition: all 0.3s; }
+  .contactSocialMedia:hover {
+    transform: scale(1.1); }
+
+.maps {
+  margin: 10px;
+  width: calc(50% - 20px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: initial; }
+
+.form {
+  margin-top: 40px;
+  border: 4px solid #818181;
+  align-self: center;
+  padding: 20px;
+  background-color: #f5f4f4; }
+
+.footer {
+  background-color: black;
+  padding: 20px 0;
+  width: 100%; }
+  .footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.footerLogo {
+  width: 20%; }
+
+.footerIcons {
+  width: 30%;
+  display: flex;
+  justify-content: initial;
+  align-items: initial; }
+  .footerIcons img {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px; }

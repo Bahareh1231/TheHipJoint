@@ -1,0 +1,90 @@
+.contactSection {
+    padding-bottom: 10%;
+}
+
+.contactContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+// contact info area
+
+.contactInfo {
+    margin: 10px;
+    width: calc(50% - 20px);
+    align-self: center;
+}
+
+.contactList {
+    list-style: none;
+    @include display(flex, center, initial);
+    flex-wrap: wrap;
+    p {
+        margin: 10px 0;
+    }
+}
+
+.details {
+    width: 100%;
+}
+
+.socialMediaBlock {
+    width: 100%;
+    @include display(flex, flex-start, initial);
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.contactSocialMedia {
+    margin-right: 10px;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+.maps {
+    margin: 10px;
+    width: calc(50% - 20px);
+    @include display (flex, flex-end, initial);
+}
+
+//form 
+
+.form {
+    margin-top: 40px;
+    border: 4px solid $darkGrey;
+    align-self: center;
+    padding: 20px;
+    background-color: rgb(245, 244, 244);
+}
+
+// footer 
+
+.footer {
+    background-color: black;
+    padding: 20px 0;
+    width: 100%;
+    .wrapper {
+        @include display(flex, space-between, center);
+    }
+}
+
+.footerLogo {
+    width: 20%;
+}
+
+.footerIcons {
+    width: 30%;
+    @include display (flex, initial, initial);
+    img {
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+    }
+}

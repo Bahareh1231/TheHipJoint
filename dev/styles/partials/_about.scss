@@ -50,6 +50,42 @@
     opacity: 1;
 }
 
+.martin {
+    &:hover  {
+        border: 3px solid $orange;
+    }
+}
+
+.amy {
+    &:hover  {
+        border: 3px solid $purple;
+    }
+}
+
+.flavio {
+    &:hover  {
+        border: 3px solid $yellow;
+    }
+}
+
+.aliona{
+    &:hover  {
+        border: 3px solid $green;
+    }
+}
+
+.janee {
+    &:hover  {
+        border: 3px solid $pink;
+    }
+}
+
+.vision {
+    &:hover  {
+        border: 3px solid $grey;
+    }
+}
+
 // our vision 
 
 .visionBlocks {
@@ -81,7 +117,7 @@
 .trained, 
 .certed {
     list-style: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 0;
     li {
         margin: 5px 0;

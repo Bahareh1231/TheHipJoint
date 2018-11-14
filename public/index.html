@@ -112,29 +112,30 @@
             <div class="wrapper">
                 <h2 class="--bodyFont">Meet the Team</h2>
                 <div class="aboutImages">
-                    <a href="" class="teamImage " data-src="vision">
-                        <div class="imageOverlay hideOverlay"><p class="--bodyFont">Our Vision</p></div>
-                        <img src="assets/vision.jpg" alt="">
-                    </a>
-                    <a href="" class="teamImage " data-src="martin">
+                    <a href="" class="teamImage martin" data-src="martin">
                         <div class="imageOverlay"><p class="--bodyFont">Martin</p></div>
                         <img src="assets/martin.jpg" alt="">
                     </a>
-                    <a href="" class="teamImage" data-src="amy">
+                    <a href="" class="teamImage amy" data-src="amy">
                         <div class="imageOverlay"><p class="--bodyFont">Amy</p></div>
                         <img src="assets/amy.jpg" alt="">
                     </a>
-                    <a href="" class="teamImage " data-src="flavio">
+                    <a href="" class="teamImage flavio" data-src="flavio">
                         <div class="imageOverlay"><p class="--bodyFont">Flavio</p></div>
                         <img src="assets/flavio.jpg" alt="">
                     </a>
-                    <a href="" class="teamImage " data-src="aliona">
+                    <a href="" class="teamImage aliona" data-src="aliona">
                         <div class="imageOverlay"><p class="--bodyFont">Aliona</p></div>
                         <img src="assets/aliona.jpg" alt="">
                     </a>
-                    <a href="" class="teamImage" data-src="janee">
+                    <a href="" class="teamImage janee" data-src="janee">
                         <div class="imageOverlay"><p class="--bodyFont">Janee</p></div>
                         <img src="assets/janee.jpg"">
+                    </a>
+                    <a href="" class="teamImage vision" data-src="vision">
+                        <div class="imageOverlay hideOverlay">
+                            <p class="--bodyFont">Our Vision</p></div>
+                        <img src="assets/vision.jpg" alt="">
                     </a>
                 </div>
                 <div class="aboutContent">
@@ -442,23 +443,32 @@
 
                 <div class="contactContent">
                     <div class="contactInfo">
-                        <h3 class="--bodyFont --bodySize">You can find us at:</h3>
-                        <ul class="contactList --bodyFont --bodySize">
-                            <li><span class="--bold">Phone: </span>(416) 461-4227</li>
-                            <li><span class="--bold">Location: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</li>
-                            <li class="contactSocialMedia">
-                                <a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
-                                    <img src="assets/facebook.svg" aria-hidden="true" class="contactFB"></a></li>
+                        <!-- <h3 class="--bodyFont --bodySize">You can find us at:</h3> -->
+                        <div class="contactList --bodyFont --bodySize">
+                            <div class="socialMediaBlock">
+                                <a class="contactSocialMedia" aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
+                                    <img src="assets/facebook.svg" aria-hidden="true" class="contactFB"></a>
+                                
+                             
+                                <a class="contactSocialMedia" aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
+                                    <img class="contactInsta" src="assets/instagram.svg" aria-hidden="true"></a>
+                            </div><!-- end of socialMediaBlock-->
+                            <p class="details"><span class="--bold">Call us: </span>(416) 461-4227</p>
+                            <p class="details"><span class="--bold">Visit us: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</p>
+                            
+                        </div><!--end of contactList-->
+                    </div><!-- end of contactInfo-->
 
-                            <li class="contactSocialMedia">
-                                <a aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
-                                    <img class="contactInsta" src="assets/instagram.svg" aria-hidden="true"></a></li>
-                        </ul>
-                    </div>
+                    
+
+                    <div class="maps">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3405599366292!2d-79.34198218465693!3d43.66188655988732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb7720c1646d%3A0xe12cd14a30cccd9d!2sThe+Hip+Joint%3A+a+movement+clinic!5e0!3m2!1sen!2sca!4v1542139193803"
+                        width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div><!-- end of maps-->
 
                     <div class="form">
                         <!-- Form Started -->
-                        
+                    
                         <form id="formBody" action="handler.php" method="POST">
                             <div class="formQuestion --bodyFont --bodySize">
                                 <label for="name">Name</label>
@@ -477,16 +487,16 @@
                                 <p class="--bodyFont --bodySize">Preferred Day of the Week:</p>
                                 <input type="checkbox" name="day[]" value="monday" id="monday">
                                 <label class="--bodyFont --bodySize" for="monday">Monday</label>
-
+                    
                                 <input type="checkbox" name="day[]" value="tuesday" id="tuesday">
                                 <label class="--bodyFont --bodySize" for="tuesday">Tuesday</label>
-
+                    
                                 <input type="checkbox" name="day[]" value="wednesday" id="wednesday">
                                 <label class="--bodyFont --bodySize" for="wednesday">Wednesday</label>
-
+                    
                                 <input type="checkbox" name="day[]" value="thursday" id="thursday">
                                 <label class="--bodyFont --bodySize" for="thursday">Thursday</label>
-
+                    
                                 <input type="checkbox" name="day[]" value="friday" id="friday">
                                 <label class="--bodyFont --bodySize" for="friday">Friday</label>
                             </div>
@@ -495,20 +505,20 @@
                                 <p class="--bodyFont --bodySize">Preferred Time of Day</p>
                                 <input type="checkbox" name="time[]" value="morning" id="morning">
                                 <label for="morning" class="--bodyFont --bodySize">Morning 9:00a - 12:00pm</label>
-
+                    
                                 <input type="checkbox" name="time[]" value="afternoon" id="afternoon">
                                 <label for="afternoon" class="--bodyFont --bodySize">Afternoon 12:01pm - 4:00pm</label>
-
+                    
                                 <input type="checkbox" name="time[]" value="evening" id="evening">
-                                <label for="evenin" class="--bodyFont --bodySize">Evening 4:00pm - 7:00pm</label>
+                                <label for="evening" class="--bodyFont --bodySize">Evening 4:00pm - 7:00pm</label>
                             </div>
-
+                    
                             <div class="formQuestion --bodyFont --bodySize">
                                 <label for="message">Message</label>
                                 <textarea id="message" rows="3" cols="10" name="message" class="form-control" placeholder="Additional notes"></textarea>
                             </div>
-                            
-    
+                    
+                    
                             <div class="form-group">
                                 <button class="btn btn-raised btn-block btn-danger">Submit</button>
                             </div>
@@ -521,17 +531,9 @@
                         <div id="success_message" style="width:100%; height:100%; display:none; ">
                             <h2>Success! Your Message was Sent Successfully.</h2>
                         </div>
-                                    
+                    
                         <!-- Form Ended -->
                     </div><!-- end of form-->
-
-                    <div class="maps">
-                        <div class="clinicMap">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3405599366292!2d-79.34198218465693!3d43.66188655988732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb7720c1646d%3A0xe12cd14a30cccd9d!2sThe+Hip+Joint%3A+a+movement+clinic!5e0!3m2!1sen!2sca!4v1542139193803"
-                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        </div><!-- end of clinic map-->
-                    
-                    </div><!-- end of maps-->
                 </div><!-- end of contactContent-->
             </div><!-- end of wrapper-->
         </section><!-- end of contactSection-->
@@ -541,15 +543,15 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="footer">
         <div class="wrapper">
-            <img src="assets/whiteLogo.png" alt="">
+            <img src="assets/whiteLogo.png" alt="" class="footerLogo">
             <div class="footerIcons">
                 <a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
-                    <img class="footerFB" src="assets/facebook.svg" aria-hidden="true"></a>
+                    <img class="footerFB" src="assets/facebookWhite.svg" aria-hidden="true"></a>
 
                 <a aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
-                    <img class="footerInsta" src="assets/instagram.svg" aria-hidden="true"></a>
+                    <img class="footerInsta" src="assets/instagramWhite.svg" aria-hidden="true"></a>
             </div>
         </div>
     </footer>
