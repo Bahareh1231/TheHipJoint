@@ -12,14 +12,16 @@
 
 .contactInfo {
     margin: 10px;
-    width: calc(50% - 20px);
+    width: calc(25% - 20px);
     align-self: center;
+    
 }
 
 .contactList {
     list-style: none;
     @include display(flex, center, initial);
     flex-wrap: wrap;
+    font-size: 1rem;
     p {
         margin: 10px 0;
     }
@@ -27,6 +29,10 @@
 
 .details {
     width: 100%;
+}
+
+.contactList .hours{
+    margin: 0;
 }
 
 .socialMediaBlock {
@@ -41,7 +47,8 @@
 .contactSocialMedia {
     margin-right: 10px;
     transition: all 0.3s;
-    &:hover {
+    &:hover,
+    &:focus {
         transform: scale(1.1);
     }
 }
@@ -49,38 +56,58 @@
 
 
 .maps {
+    // width: 100%;
     margin: 10px;
-    width: calc(50% - 20px);
+    width: calc(35% - 20px);
     @include display (flex, flex-end, initial);
+    // iframe {
+    //     height: 100%;
+    //     width: 100%;
+    // }
 }
 
 //form 
 
 .form {
-    margin-top: 40px;
-    border: 4px solid $darkGrey;
+    // border: 4px solid $darkGrey;
     align-self: center;
     padding: 20px;
-    width: 60%;
-    background-color: rgb(245, 244, 244);
+    margin: 10px;
+    width: calc(40% - 20px);
+    // width: 60%;
+    background-color: $formGreen;
+    // background-image: url('../assets/nutrition.jpg');
+    position: relative;
     &:focus-within input{
         border: 1px solid black;
     }
     &:focus-within textarea {
         border: 1px solid black;
     }
+    h4 {
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }
+
+// .formOverlay {
+//     @include position(absolute, 0, 0, 0, 0);
+//     background-color: rgba($color: #ffffff, $alpha: 0.9);
+//     z-index: 40;
+// }
 
 .formForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    position: relative;
+    z-index: 50;
 }
 
 .formQuestion input,
 .formQuestion textarea {
     padding: 7px;
-    background: rgb(245, 244, 244);
+    background-color: $formGreen;
     border: none;
     width: 100%;
     border-bottom: 1px solid black;
@@ -106,37 +133,47 @@
 }
 
 .formCheckbox {
-    @include display (flex, initial, initial);
-    flex-direction: column;
-    width: 50%;
-    input {
-        display: none;
-        &:checked + label {
-            font-weight: 700;
-        }
-    }
-    label {
-        margin-bottom: 10px;
-        padding-left: 20px;
-        display: inline-block;
-        &:after {
-            content: '';
-            display: block;
-            width: 0%;
-            height: 2px;
-            background-color: $darkGrey;
-            transition: all 0.3s;
-        }
-        &:hover {
-            cursor: pointer;
-            &:after {
-                content: '';
-                display: block;
-                width: 20%;
-                height: 2px;
-                background-color: $darkGrey;
-            }
-        }
+    margin: 10px;
+    width: calc(50% - 10px);
+    // input {
+    //     display: none;
+    //     &:checked + label {
+    //         font-weight: 700;
+    //     }
+    // }
+    // label {
+    //     margin-bottom: 10px;
+    //     padding-left: 20px;
+    //     display: inline-block;
+    //     &:after {
+    //         content: '';
+    //         display: block;
+    //         width: 0%;
+    //         height: 2px;
+    //         background-color: $darkGrey;
+    //         transition: all 0.3s;
+    //     }
+    //     &:hover {
+    //         cursor: pointer;
+    //         &:after {
+    //             content: '';
+    //             display: block;
+    //             width: 20%;
+    //             height: 2px;
+    //             background-color: $darkGrey;
+    //         }
+    //     }
+    // }
+}
+
+select {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+    option {
+        width: 100%;
+        padding: 20px;
     }
 }
 
@@ -148,7 +185,8 @@
     color: black;
     margin-top: 20px;
     transition: all 0.5s;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: black;
         color: white; 
     }
@@ -165,20 +203,119 @@
     }
 }
 
+.footerContact {
+    color: white;
+    text-align: center;
+}
+
 .footerLogo {
     width: 20%;
 }
 
 .footerIcons {
-    width: 30%;
-    @include display (flex, initial, initial);
+    @include display (flex, flex-end, initial);
     img {
         height: 50px;
         width: 50px;
         margin-left: 10px;
         transition: all 0.3s;
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(1.1);
         }
     }
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1200px) {
+    .contactInfo {
+        width: calc(50% - 20px);
+        text-align: left;
+    }
+
+    .maps {
+        width: calc(50% - 20px);
+        
+    }
+
+    .form {
+        width: 60%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 780px) {
+    .contactInfo,
+    .maps,
+    .form {
+        width: 100%;
+        margin: 30px 0 0 0;
+
+    }
+
+    .maps {
+        justify-content: center;
+    }
+
+    .contactList {
+        text-align: center;
+    }
+
+    footer {
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+
+    .footerLogo {
+        order: 3;
+        width: 30%;
+    }
+
+    .footerIcons {
+        order: 1;
+    }
+
+    .footerContact {
+        order: 2;
+    }
+
+    .details:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .details:nth-of-type(2) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 530px) {
+    .formForm {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .formQuestion {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    textarea {
+        margin: 10px 0 0 0;
+    }
+
+    .checkBoxes {
+        flex-direction: column;
+    }
+
+    .formCheckbox {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .footerLogo {
+        width: 40%;
+    }
+
 }

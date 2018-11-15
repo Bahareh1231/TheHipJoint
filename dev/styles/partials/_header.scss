@@ -2,12 +2,13 @@
     background-image: url('/../assets/background.jpg');
     background-size: cover;
     height: 100vh;
-    background-position-y: 52%;
+    background-position: center;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .headerNav {
-    padding: 33px 0;
+    padding: 25px 0 0 0;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -19,7 +20,7 @@
 }
 
 .navOverlay {
-    background-color: rgba($color: #000000, $alpha: 0.2);
+    background-color: rgba($color: #000000, $alpha: 0.6);
 }
 
 .logo {
@@ -62,15 +63,17 @@
     height: 100%;
     @include display(flex, initial, center);
     transition: all 0.5s;
-    &:hover {
+    &:hover,
+    &:focus {
         transform: translateY(7px);
         color: $grey;
     }
 }
 
 .navLinkScrollUp {
-    color: black;
-    &:hover {
+    // color: black;
+    &:hover,
+    &:focus {
         color: $darkGrey;
     }
 }
@@ -107,4 +110,198 @@
 .headerTextEffect {
     transform: translateY(0px);
     opacity: 1;
+}
+
+.mobileNav {
+    // display: none;
+    pointer-events: none;
+    @include position(fixed, 0, 0, 0, 50%);
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 100;
+    padding-top: 95px;
+    padding-right: 30px;
+    opacity: 0;
+    transform: translateX(220px);
+    transition: all 1s;
+}
+
+// overlay Button
+
+.overlayButton {
+    position: fixed;
+    top: -11px;
+    right: 0px;
+    z-index: 330;
+    height: 123px;
+    width: 123px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: none;
+    border-radius: 50%;
+    transition: all 1s;
+    &:before {
+        content: '';
+        height: 10px;
+        width: 50px;
+        background-color: white;
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 10px;
+        transition: all 1s;
+        opacity: 1;
+        position: relative;
+        right: -35px;
+        bottom: 38px;
+    }
+    &:after {
+        content: '';
+        height: 10px;
+        width: 50px;
+        background-color: white;
+        border-radius: 4px;
+        display: block;
+        transition: all 1s;
+        opacity: 1;
+        position: relative;
+        right: -35px;
+        bottom: 38px;
+    }
+}
+
+.navButtonBlack {
+        &:before,
+        &:after {
+            background-color: black;
+        }
+    }
+
+.closeNavOverlay {
+    &:before {
+        bottom: 28px;
+        background-color: white;
+        transform: rotate(45deg);
+    }
+    &:after {
+        bottom: 46px;
+        background-color: white;
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+// MEDIA QUERIES
+
+@media (max-width: 940px) {
+    .headerList {
+       display: none; 
+    }
+
+    .overlayButton {
+        display: flex;
+    }
+
+    .headerNav {
+        position: static;
+    }
+
+    .mobileNavShow {
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
+    }
+    
+    .mobileList {
+        list-style: none;
+        font-size: 2rem;
+        padding-left: 0;
+        li {
+            margin-bottom: 40px;
+            text-align: right;
+        }
+    }
+
+    .navLinkMobile {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        &:after {
+            content: '';
+            width: 0%;
+            height: 1px;
+            background-color: white;
+            display: block;
+            transition: all 1s;
+        }
+        &:hover:after,
+        &:focus:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            display: block;
+        }
+    }
+
+    .logo {
+        width: 32%;
+    }
+}
+
+@media (max-width: 660px) {
+    .--headerSize {
+        font-size: 2.5rem;
+    }
+
+    .header {
+        background-position-x: 19%;
+    }
+
+    .logo {
+        width: 44%;
+        margin-left: 10px;
+    }
+
+    .overlayButton {
+        right: -14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .--headerSize {
+        font-size: 2rem;
+    }
+
+    .header {
+        background-position-x: 24%;
+    }
+
+    .headerTextFlex {
+        height: 60%;
+    }
+
+    .logo {
+        width: 49%;
+    }
+
+    .mobileNav {
+        left: 25%;
+    }
+}
+
+@media (max-width: 400px) {
+    .--headerSize {
+        font-size: 1.3rem;
+    }
+
+    .header {
+        background-position-x: 24%;
+    }
+
+    .mobileNav {
+        left: 0;
+    }
 }

@@ -23,6 +23,7 @@
                 <div class="logo">
                     <h1 class="visuallyhidden">The Hip Joint</h1>
                     <img src="assets/whiteLogo.png" alt="The Hip Joint logo, that uses the end of a femur to create the letter 'p' in it" class="headerLogo">
+                    <!-- <img src="assets/logo.png" alt="" > -->
                 </div>
                 <ul class="headerList --bodyFont --navSize">
                     <li><a class="navLink" href="#services">services</a></li>
@@ -38,7 +39,19 @@
                 <p aria-label="tagline" class="--headerSize --bodyFont "><span class="tagWords move">move</span><span class="laugh tagWords">laugh</span><span class="tagWords play">play</span></p>
             </div><!-- end of headerTextFlex-->
         </div><!-- end of headerText-->
+
+        <nav class="mobileNav">
+            <ul class="mobileList --bodyFont --navSize">
+                <li><a class="navLinkMobile" href="#services">services</a></li>
+                <li><a class="navLinkMobile" href="#about">meet the team</a></li>
+                <li><a class="navLinkMobile" href="">blog</a></li>
+                <li><a class="navLinkMobile" href="#contact">contact</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- mobile button-->
+    <a aria-label="open and close navigation" href="" class="overlayButton"></a>
 
     <main>
 
@@ -52,7 +65,7 @@
                     <!-- CHIRO, PHYSIO, MASSAGE -->
                     <div class="serviceBlock leftalign">
                         <div class="serviceText">
-                            <p class=" --bodyFont --bodySize serviceName --bold">Chiro, Physio and Massage</p>
+                            <p class=" --bodyFont --bodySize serviceName --bold">Chiropractic, Physiotherapy and Massage</p>
                             <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Chiropractors and Physiotherapists are specialists in the connection of your muscles, bones and joint to the nerves around
                             it. They work closely with our Registered Massage Therapists to get you moving and out of pain.</p>
                         </div><!-- end of serviceText-->
@@ -111,58 +124,77 @@
         <section class="aboutSection" id="about">
             <div class="wrapper">
                 <h2 class="--bodyFont">Meet the Team</h2>
+
+                <!-- OUR VISION -->
+                <div class="ourVision">
+                    <div class="aboutText">
+                        <h3 class="--bodyFont">Our Vision</h3>
+                        <div class="visionBlocks">
+                            <div class="visionText">
+                                <p class="--bodyFont --bodySize --bold">Knowledge is power</p>
+                                <p class="--bodyFont --bodySize --darkGrey">Our practitioners have a wealth of knowledge and a generous heart.
+                                    They love educating patients on the source of their symptoms and ways to prevent injury from occurring.</p>
+                            </div>
+                            <div class="visionText">
+                                <p class="--bodyFont --bodySize --bold">Manual therapy is an art</p>
+                                <p class="--bodyFont --bodySize --darkGrey">Therapy is most effective if the correct tissue/joint is targeted
+                                    properly. Our practitioners know the right amount of pressure, the ideal direction and best position
+                                    with the rest of the body.</p>
+                            </div>
+                            <div class="visionText">
+                                <p class="--bodyFont --bodySize --bold">Fine Tuning the Body</p>
+                                <p class="--bodyFont --bodySize --darkGrey">Many performing artists are perfectionists in their craft. Our
+                                    practitioners use their skills to help them to optimize a players's movement.</p>
+                            </div>
+                        </div><!-- end of visionBlock-->
+                    </div><!-- end of aboutText-->
+                </div><!-- end of ourVision-->
+
                 <div class="aboutImages">
                     <a href="" class="teamImage martin" data-src="martin">
-                        <div class="imageOverlay"><p class="--bodyFont">Martin</p></div>
+                        <div class="imageOverlay">
+                            <p class="nameOverlay --bodyFont">Martin</p>
+                            <p class="skillsOverlay --bodyFont">Chiropractor</p>
+                        </div>
                         <img src="assets/martin.jpg" alt="">
                     </a>
                     <a href="" class="teamImage amy" data-src="amy">
-                        <div class="imageOverlay"><p class="--bodyFont">Amy</p></div>
+                        <div class="imageOverlay">
+                            <p class="nameOverlay --bodyFont">Amy</p>
+                            <p class="skillsOverlay --bodyFont">Chiropractor</p>
+                        </div>
                         <img src="assets/amy.jpg" alt="">
                     </a>
                     <a href="" class="teamImage flavio" data-src="flavio">
-                        <div class="imageOverlay"><p class="--bodyFont">Flavio</p></div>
+                        <div class="imageOverlay">
+                            <p class="nameOverlay --bodyFont">Flavio</p>
+                            <p class="skillsOverlay --bodyFont">RMT</p>
+                        </div>
                         <img src="assets/flavio.jpg" alt="">
                     </a>
                     <a href="" class="teamImage aliona" data-src="aliona">
-                        <div class="imageOverlay"><p class="--bodyFont">Aliona</p></div>
+                        <div class="imageOverlay">
+                            <p class="nameOverlay --bodyFont">Aliona</p>
+                            <p class="skillsOverlay --bodyFont">Nutritionist</p>
+                        </div>
                         <img src="assets/aliona.jpg" alt="">
                     </a>
                     <a href="" class="teamImage janee" data-src="janee">
-                        <div class="imageOverlay"><p class="--bodyFont">Janee</p></div>
+                        <div class="imageOverlay">
+                            <p class="nameOverlay --bodyFont">Janee</p>
+                            <p class="skillsOverlay --bodyFont">RMT</p>                        
+                        </div>
                         <img src="assets/janee.jpg"">
                     </a>
-                    <a href="" class="teamImage vision" data-src="vision">
+                    <!-- <a href="" class="teamImage vision" data-src="vision">
                         <div class="imageOverlay hideOverlay">
                             <p class="--bodyFont">Our Vision</p></div>
                         <img src="assets/vision.jpg" alt="">
-                    </a>
+                    </a> -->
                 </div>
                 <div class="aboutContent">
 
-                     <!-- OUR VISION -->
-                    <div class="showTeam aboutBlock" data-src="vision">
-                        <div class="aboutText">
-                            <h3 class="--bodyFont">Our Vision</h3>
-                            <div class="visionBlocks">
-                                <div class="visionText">
-                                    <p class="--bodyFont --bodySize --bold">Knowledge is power</p>
-                                    <p class="--bodyFont --bodySize --darkGrey">Our practitioners have a wealth of knowledge and a generous heart. They love educating patients on the source of their symptoms
-                                    and ways to prevent injury from occurring.</p>
-                                </div>
-                                <div class="visionText">
-                                    <p class="--bodyFont --bodySize --bold">Manual therapy is an art</p>
-                                    <p class="--bodyFont --bodySize --darkGrey">Therapy is most effective if the correct tissue/joint is targeted properly. Our practitioners know the right amount of pressure,
-                                    the ideal direction and best position with the rest of the body.</p>
-                                </div>
-                                <div class="visionText">
-                                    <p class="--bodyFont --bodySize --bold">Fine Tuning the Body</p>
-                                    <p class="--bodyFont --bodySize --darkGrey">Many performing artists are perfectionists in their craft. Our practitioners use their skills to help them to optimize a
-                                    players's movement.</p>
-                                </div>
-                            </div>
-                        </div><!-- end of aboutText-->
-                    </div><!-- end of aboutBlock-->
+                    
 
 
                     <!-- MARTIN LAI -->
@@ -198,8 +230,8 @@
                             
                                 <div class="aboutTextPara">
                                     <p class="--bodyFont --bodySize --bold">Dr. Martin Lai is available at The Hip Joint:</p>
-                                    <p class="--bodyFont --bodySize --bold">Monday - Thursday and Saturday</p>
-                                    <p class="--bodyFont --bodySize --bold">10:30am – 6:00pm</p>
+                                    <p class="availDates --bodyFont --bodySize --bold">Monday - Thursday and Saturday</p>
+                                    <p class="availTimes --bodyFont --bodySize --bold">10:30am – 6:00pm</p>
                                     <p class="--bodyFont --bodySize">Dr. Martin Lai is a dutifully trained chiropractor, acupuncture provider and kinesiologist specializing in functional ability
                                     evaluations, ergonomic testing and developing individualized return to work and return to play programs. Dr. Martin received
                                     a degree in kinesiology from the University of Toronto specializing in biomechanics and rehabilitation and a Doctor of Chiropractic
@@ -226,7 +258,7 @@
                     <div class="aboutBlock" data-src="amy">
                         <div class="aboutText">
                             <h3 class="--bodyFont">Dr. Amy Chan <span class="cred">H.B.Sc., D.C.</span></h3>
-                            <h4 class="--bodyFont --purple">Chiropractor ​Traditional Chinese Medicine Acupuncture Provider</h4>
+                            <h4 class="--bodyFont --purple">Chiropractor, ​Traditional Chinese Medicine, Acupuncture Provider</h4>
                             <div class="aboutTextFlex">
                                 <div class="leftColumn">
                                     <img src="assets/amy.jpg" alt="">
@@ -255,8 +287,8 @@
                                 
                                 <div class="aboutTextPara">
                                     <p class="--bodyFont --bodySize --bold">Dr. Amy Chan is available at The Hip Joint:</p>
-                                    <p class="--bodyFont --bodySize --bold">Monday, Wednesday and Friday</p>
-                                    <p class="--bodyFont --bodySize --bold">9:00am – 5:00pm</p>
+                                    <p class="availDates --bodyFont --bodySize --bold">Monday, Wednesday and Friday</p>
+                                    <p class="availTimes --bodyFont --bodySize --bold">9:00am – 5:00pm</p>
                                     <p class="--bodyFont --bodySize">Dr. Amy Chan is a dutifully trained chiropractor, traditional Chinese acupuncture provider and cellular specialist. Dr. Chan
                                     received a degree in biological sciences specializing in cell and molecular biology and a Doctor of Chiropractic from the
                                     Canadian Memorial Chiropractic College. In addition, she is certified in tradition Chinese acupuncture and is a proficiency-rated
@@ -307,8 +339,8 @@
                                 </div><!-- end of leftColumn-->
                                 <div class="aboutTextPara">
                                     <p class="--bodyFont --bodySize --bold">Flavio Misuraca is available at The Hip Joint:</p>
-                                    <p class="--bodyFont --bodySize --bold">Monday and Wednesday</p>
-                                    <p class="--bodyFont --bodySize --bold">9:00am – 6:00pm</p>
+                                    <p class="availDates --bodyFont --bodySize --bold">Monday and Wednesday</p>
+                                    <p class="availTimes --bodyFont --bodySize --bold">9:00am – 6:00pm</p>
                                     <p class="--bodyFont --bodySize">Flavio Misuraca is a dutifully trained Registered Massage Therapist, is a good-standing member of the College of Massage
                                     Therapists of Ontario. He received his diploma in Massage Therapy from the Canadian College of Massage and Hydrotherapy.
                                     Flavio has received training in cross friction techniques, fascial techniques, and deep structure massage.</p>
@@ -357,8 +389,8 @@
                                 
                                 <div class="aboutTextPara">
                                     <p class="--bodyFont --bodySize --bold">Aliona Ciobanu is available at The Hip Joint:</p>
-                                    <p class="--bodyFont --bodySize --bold">Wednesday and Saturday</p>
-                                    <p class="--bodyFont --bodySize --bold">10:30am – 5:00pm</p>
+                                    <p class="availDates --bodyFont --bodySize --bold">Wednesday and Saturday</p>
+                                    <p class="availTimes --bodyFont --bodySize --bold">10:30am – 5:00pm</p>
                                     <p class="--bodyFont --bodySize"> Aliona Ciobanu is a registered nurse, holistic nutritionist with a rich background in nutritional sciences. Aliona received
                                     a degree in Biochemistry from McGill University where she spent years conducting scientific research and contributing to
                                     research published in the Biofouling Journal. She later completed a degree in Nursing at McGill University to widen her scope
@@ -410,8 +442,8 @@
                                 
                                 <div class="aboutTextPara">
                                     <p class="--bodyFont --bodySize --bold">Janee Wongthong is available at The Hip Joint:</p>
-                                    <p class="--bodyFont --bodySize --bold">Monday - Thursday and Saturday</p>
-                                    <p class="--bodyFont --bodySize --bold">10:30am – 6:00pm</p>
+                                    <p class="availDates --bodyFont --bodySize --bold">Monday - Thursday and Saturday</p>
+                                    <p class="availTimes --bodyFont --bodySize --bold">10:30am – 6:00pm</p>
                                     <p class="--bodyFont --bodySize">Janee Wongthong is a dutifully trained Registered Massage Therapist, is a good-standing member of the College of Massage
                                     Therapists of Ontario. She received her diploma in Massage Therapy from the Protégé School after graduating summa cum laude,
                                     the top of her class.</p>
@@ -442,19 +474,28 @@
                 <h2 class="--bodyFont">Contact Us</h2>
 
                 <div class="contactContent">
+
                     <div class="contactInfo">
                         <!-- <h3 class="--bodyFont --bodySize">You can find us at:</h3> -->
-                        <div class="contactList --bodyFont --bodySize">
-                            <div class="socialMediaBlock">
+                        <div class="contactList --bodyFont --contactSize">
+                            <!-- <div class="socialMediaBlock">
                                 <a class="contactSocialMedia" aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
                                     <img src="assets/facebook.svg" aria-hidden="true" class="contactFB"></a>
                                 
                              
                                 <a class="contactSocialMedia" aria-label="link to instagram page" href="https://www.instagram.com/thehipjoint.ca/" target="_blank">
                                     <img class="contactInsta" src="assets/instagram.svg" aria-hidden="true"></a>
-                            </div><!-- end of socialMediaBlock-->
+                            </div> -->
+                            <!-- end of socialMediaBlock-->
                             <p class="details"><span class="--bold">Call us: </span>(416) 461-4227</p>
-                            <p class="details"><span class="--bold">Visit us: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</p>
+                            <!-- <p class="details"><span class="--bold">Visit us: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</p> -->
+                            <p class="details hours"><span class=" --bold">Monday: </span>9:30 - 5:00</p> 
+                            <p class="details hours"><span class=" --bold">Tuesday: </span>10:30 - 7:00 </p>
+                            <p class="details hours"><span class=" --bold">Wednesday: </span>9:30 - 5:00</p>
+                            <p class="details hours"><span class=" --bold">Thursday: </span>10:30 - 7:00 </p>
+                            <p class="details hours"><span class=" --bold">Friday: </span>9:30 - 5:00</p>
+                            <p class="details hours"><span class=" --bold">Saturday: </span>10:30 - 1:00</p>
+                            <p class="details hours"><span class=" --bold">Sunday: </span>By appointment only</p>
                             
                         </div><!--end of contactList-->
                     </div><!-- end of contactInfo-->
@@ -463,66 +504,61 @@
 
                     <div class="maps">
                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3405599366292!2d-79.34198218465693!3d43.66188655988732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb7720c1646d%3A0xe12cd14a30cccd9d!2sThe+Hip+Joint%3A+a+movement+clinic!5e0!3m2!1sen!2sca!4v1542139193803"
-                        width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        width="738" height="387"  frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div><!-- end of maps-->
 
                     <div class="form">
+                        <div class="formOverlay"></div>
                         <!-- Form Started -->
-                    
+                        <h4 class="--bodyFont">Send us a message!</h4>
                         <form id="formBody" action="handler.php" method="POST" class="formForm">
                             <div class="formQuestion --bodyFont --formSize">
-                                <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name" required>
-                                <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control" placeholder="Email" required>
+                                <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name"
+                                    required>
+                                <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control"
+                                    placeholder="Email" required>
                                 <input aria-label="enter your phone number" id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number">
                             </div>
-
+                    
                             <div class="formQuestion --bodyFont --formSize">
-                                <textarea aria-label="any additional messages" rows="4" type="text" id="message"  resize="none" name="message" class="form-control" placeholder="Additional notes"></textarea>
+                                <textarea aria-label="any additional messages" rows="4" type="text" id="message" resize="none" name="message" class="form-control"
+                                    placeholder="Additional notes"></textarea>
                             </div><!-- end of message area-->
-
+                    
                             <div class="checkBoxes">
                                 <!-- preferred day of the week -->
                                 <div class="formCheckbox --bodyFont --formSize">
-                                    <p class="--bodyFont --bodySize">Preferred Day of the Week:</p>
-                                    <input type="checkbox" name="day[]" value="monday" id="monday">
-                                    <label class="--bodyFont" for="monday">Monday</label>
-                        
-                                    <input type="checkbox" name="day[]" value="tuesday" id="tuesday">
-                                    <label class="--bodyFont" for="tuesday">Tuesday</label>
-                        
-                                    <input type="checkbox" name="day[]" value="wednesday" id="wednesday">
-                                    <label class="--bodyFont" for="wednesday">Wednesday</label>
-                        
-                                    <input type="checkbox" name="day[]" value="thursday" id="thursday">
-                                    <label class="--bodyFont" for="thursday">Thursday</label>
-                        
-                                    <input type="checkbox" name="day[]" value="friday" id="friday">
-                                    <label class="--bodyFont" for="friday">Friday</label>
+                                    <p class="--bodyFont">Preferred Day:</p>
+                                    <select name="dayOfWeek" id="">
+                                        <option value="Monday">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                    </select>
                                 </div>
                                 <!-- preferred time of day -->
-                                <div class="formCheckbox --formSize">
-                                    <p class="--bodyFont --bodySize">Preferred Time of Day:</p>
-                                    <input type="checkbox" name="time[]" value="morning" id="morning">
-                                    <label for="morning" class="--bodyFont ">Morning 9:00am - 12:00pm</label>
-                        
-                                    <input type="checkbox" name="time[]" value="afternoon" id="afternoon">
-                                    <label for="afternoon" class="--bodyFont ">Afternoon 12:01pm - 4:00pm</label>
-                        
-                                    <input type="checkbox" name="time[]" value="evening" id="evening">
-                                    <label for="evening" class="--bodyFont ">Evening 4:00pm - 7:00pm</label>
+                                <div class="formCheckbox --bodyFont --formSize">
+                                    <p class="--bodyFont">Preferred Time:</p>
+                                    <select name="timeOfDay" id="">
+                                        <option value="Morning">Morning 9:00am - 12:00pm</option>
+                                        <option value="Afternoon">Afternoon 12:00pm - 4:00pm</option>
+                                        <option value="Evening">Evening 4:00pm - 7:00pm</option>
+                                    </select>
+                                 
                                 </div>
-                            </div><!-- end of checkBoxes-->
-                    
-                            
-                    
+                            </div><!-- end of checkBoxes-->                    
                     
                             <div class="form-group">
                                 <button class="button --bodyFont">Submit</button>
                             </div>
                         </form>
                         <!-- Form Ended -->
-
+                    
                     </div><!-- end of form-->
+
+                    
                 </div><!-- end of contactContent-->
             </div><!-- end of wrapper-->
         </section><!-- end of contactSection-->
@@ -535,6 +571,10 @@
     <footer class="footer">
         <div class="wrapper">
             <img src="assets/whiteLogo.png" alt="" class="footerLogo">
+            <div class="footerContact">
+                <p class="details --bodyFont"><span class="--bold">Call us: </span>(416) 461-4227</p>
+                <p class="details --bodyFont"><span class="--bold">Visit us: </span>181 Carlaw Ave #304, Toronto, ON M4M 2S1</p>
+            </div>
             <div class="footerIcons">
                 <a aria-label="link to facebook page" href="https://www.facebook.com/thehipjoint.ca/" target="_blank">
                     <img class="footerFB" src="assets/facebookWhite.svg" aria-hidden="true"></a>
@@ -550,3 +590,27 @@
     
 </body>
 </html>
+
+<!-- <input type="checkbox" name="day[]" value="monday" id="monday">
+<label class="--bodyFont" for="monday">Monday</label>
+
+<input type="checkbox" name="day[]" value="tuesday" id="tuesday">
+<label class="--bodyFont" for="tuesday">Tuesday</label>
+
+<input type="checkbox" name="day[]" value="wednesday" id="wednesday">
+<label class="--bodyFont" for="wednesday">Wednesday</label>
+
+<input type="checkbox" name="day[]" value="thursday" id="thursday">
+<label class="--bodyFont" for="thursday">Thursday</label>
+
+<input type="checkbox" name="day[]" value="friday" id="friday">
+<label class="--bodyFont" for="friday">Friday</label> -->
+
+<!-- <input type="checkbox" name="time[]" value="morning" id="morning">
+<label for="morning" class="--bodyFont ">Morning 9:00am - 12:00pm</label>
+
+<input type="checkbox" name="time[]" value="afternoon" id="afternoon">
+<label for="afternoon" class="--bodyFont ">Afternoon 12:01pm - 4:00pm</label>
+
+<input type="checkbox" name="time[]" value="evening" id="evening">
+<label for="evening" class="--bodyFont ">Evening 4:00pm - 7:00pm</label> -->

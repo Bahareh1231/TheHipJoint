@@ -8,7 +8,7 @@ $('a[href*="#"]').on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({
         scrollTop: $($(this).attr('href')).offset().top
-    }, 600, 'swing');
+    }, 900, 'swing');
 });
 
 const app = {}
@@ -95,6 +95,8 @@ app.scrollUpNav = function () {
             $('.headerList').removeClass('navGone');
             $('.navLink').removeClass('navLinkScrollUp');
             $('.headerNav').removeClass('navGone navOverlay');
+            $('.overlayButton').removeClass('navButtonBlack');
+            $('.overlayButton').removeClass('navGone');
         }
 
         // header is not in view
@@ -104,6 +106,9 @@ app.scrollUpNav = function () {
             $('.headerNav')
                 .removeClass('navGone')
                 .addClass('navOverlay');
+            $('.test').addClass('testShow');
+            $('.overlayButton').addClass('navButtonBlack');
+            $('.overlayButton').removeClass('navGone');
         }
     }
 
@@ -113,6 +118,7 @@ app.scrollUpNav = function () {
         if ((screenBottom > headerTop) && (screenTop < headerBottom)) {
             $('.logo').addClass('navGone');
             $('.headerList').addClass('navGone');
+            
         }
 
         // header is not in view
@@ -121,6 +127,7 @@ app.scrollUpNav = function () {
             $('.navLink').removeClass('navLinkScrollUp');
             $('.headerList').addClass('navGone');
             $('.headerNav').addClass('navGone');
+            $('.overlayButton').addClass('navGone');
         }// end of else header is not in view
     } // end of scrolling down
 
@@ -192,12 +199,41 @@ app.viewTeam = function() {
     })// end of event
 }
 
+app.navButton = () => {
+    $('.overlayButton').on('click', function(e){
+        e.preventDefault();
+        
+        let overlayShowing = $('.mobileNav').hasClass('mobileNavShow');
+
+        // if the nav isn't opened yet
+        if(!overlayShowing) {
+            $('.mobileNav').addClass('mobileNavShow');
+            $('.overlayButton').addClass('closeNavOverlay');
+
+        //if nav is opened
+        } else {
+            $('.mobileNav').removeClass('mobileNavShow');
+            $('.overlayButton').removeClass('closeNavOverlay');
+            
+        } // end of if
+    })// end of event
+}
+
+app.navAction = () => {
+    $('.navLinkMobile').on('click', function(){
+        $('.mobileNav').removeClass('mobileNavShow');
+        $('.overlayButton').removeClass('closeNavOverlay');
+    })
+}
+
 app.init = () => {
     app.submitForm();
     app.scrollingEvent();
     app.headerTextEffect();
     app.scrollEffects();
     app.viewTeam();
+    app.navButton();
+    app.navAction();
 }
 
 $(function(){

@@ -33,9 +33,9 @@
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    padding-bottom: calc(33% - 40px);
     img {
-        width: 100%;
-        height: 100%;
+        @include position(absolute, 0, 0, 0, 0);
     }
 }
 
@@ -44,4 +44,40 @@
     margin: 20px;
     @include display (flex, center, initial);
     flex-direction: column;
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 820px) {
+    .serviceDescription {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 710px) {
+    .serviceBlock {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+
+    .serviceText {
+        width: 100%;
+        margin: 0;
+    }
+
+    .leftalign p, 
+    .rightalign .serviceName,
+    .rightalign p {
+        text-align: center;
+    }
+
+    .leftalign .serviceText {
+        order: 2;
+    }
+
+    .serviceImage {
+        width: 40%;
+        padding-bottom: 40%;
+    }
 }
