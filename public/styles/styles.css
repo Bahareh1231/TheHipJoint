@@ -393,6 +393,10 @@ h4 {
   background-color: white;
   transform: rotate(-45deg); }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  header {
+    background-attachment: scroll; } }
+
 @media (max-width: 940px) {
   .headerList {
     display: none; }
@@ -448,7 +452,8 @@ h4 {
   .--headerSize {
     font-size: 2rem; }
   .header {
-    background-position-x: 24%; }
+    background-position-x: 24%;
+    background-position-y: bottom; }
   .headerTextFlex {
     height: 60%; }
   .logo {

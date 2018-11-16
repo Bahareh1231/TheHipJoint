@@ -193,6 +193,14 @@
 
 // MEDIA QUERIES
 
+// for touch devices that dont support background-attachment: fixed
+
+@supports (-webkit-overflow-scrolling: touch) {
+    header {
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 940px) {
     .headerList {
        display: none; 
@@ -277,6 +285,7 @@
 
     .header {
         background-position-x: 24%;
+        background-position-y: bottom;
     }
 
     .headerTextFlex {
