@@ -116,7 +116,7 @@ app.scrollUpNav = function () {
     if (currentScroll > previousScroll) {
         // header is in view
         if ((screenBottom > headerTop) && (screenTop < headerBottom)) {
-            $('.logo').addClass('navGone');
+            // $('.logo').addClass('navGone');
             $('.headerList').addClass('navGone');
             
         }
