@@ -229,11 +229,13 @@ h4 {
   .wrapper {
     width: 95%; }
   p {
-    line-height: 23px; } }
-
-@media (max-width: 900px) {
+    line-height: 23px; }
   h2 {
     font-size: 2.4rem; } }
+
+@media (max-width: 710px) {
+  h2 {
+    text-align: center; } }
 
 .header {
   background-image: url("/../assets/background.jpg");
@@ -556,11 +558,9 @@ h4 {
   position: relative;
   font-size: 1.2rem;
   padding-bottom: calc(20% - 20px); }
-  .teamImage:hover .skillsOverlay,
-  .teamImage:focus .skillsOverlay {
+  .teamImage:hover .skillsOverlay {
     display: none; }
-  .teamImage:hover .nameOverlay,
-  .teamImage:focus .nameOverlay {
+  .teamImage:hover .nameOverlay {
     display: block; }
   .teamImage img {
     position: absolute;
@@ -581,6 +581,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   opacity: 1;
   transition: all 0.5s;
   z-index: 40; }
@@ -597,22 +598,22 @@ h4 {
   display: block;
   opacity: 1; }
 
-.martin:hover, .martin:focus {
+.martin:hover {
   border: 3px solid #DA8044; }
 
-.amy:hover, .amy:focus {
+.amy:hover {
   border: 3px solid #B073DA; }
 
-.flavio:hover, .flavio:focus {
+.flavio:hover {
   border: 3px solid #c6ad5c; }
 
-.aliona:hover, .aliona:focus {
+.aliona:hover {
   border: 3px solid #91E05C; }
 
-.janee:hover, .janee:focus {
+.janee:hover {
   border: 3px solid #E889E0; }
 
-.vision:hover, .vision:focus {
+.vision:hover {
   border: 3px solid #d3d8dc; }
 
 .availDates {
@@ -686,9 +687,13 @@ h4 {
     margin-right: 0; } }
 
 @media (max-width: 495px) {
+  .header {
+    background-position: 24% 0%; }
   .teamImage {
     width: calc(90% - 20px);
     padding-bottom: calc(90% - 20px); }
+    .teamImage:hover .skillsOverlay {
+      display: block; }
   .imageOverlay p {
     font-size: 2rem; } }
 
