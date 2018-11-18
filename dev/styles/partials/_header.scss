@@ -183,7 +183,7 @@
         transform: rotate(45deg);
     }
     &:after {
-        bottom: 46px;
+        bottom: 48px;
         background-color: white;
         transform: rotate(-45deg);
     }
@@ -262,7 +262,7 @@
 @media (max-width: 660px) {
 
     // .header {
-    //     background-size: initial;
+    //     background-size: auto;
     // }
 
     .--headerSize {
