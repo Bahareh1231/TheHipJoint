@@ -26,12 +26,12 @@
     position: relative;
     font-size: 1.2rem;
     padding-bottom: calc(20% - 20px);
-    &:hover .skillsOverlay {
-        display: none;
-    }
-    // &:hover .nameOverlay {
-    //     display: block;
+    // &:hover .skillsOverlay {
+    //     display: none;
     // }
+    &:hover .nameOverlay {
+        display: block;
+    }
     img {
         @include position (absolute, 0, 0, 0, 0);
         z-index: 30;
