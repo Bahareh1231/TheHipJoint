@@ -560,6 +560,8 @@ h4 {
   position: relative;
   font-size: 1.2rem;
   padding-bottom: calc(20% - 20px); }
+  .teamImage:hover .skillsOverlay {
+    display: none; }
   .teamImage img {
     position: absolute;
     top: 0;
