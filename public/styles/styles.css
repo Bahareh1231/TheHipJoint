@@ -441,7 +441,7 @@ h4 {
 
 @media (max-width: 660px) {
   .header {
-    height: 100vh; }
+    background-size: cover; }
   .--headerSize {
     font-size: 2.5rem; }
   .header {
