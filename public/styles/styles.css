@@ -239,6 +239,7 @@ h4 {
 
 .header {
   background-image: url("/../assets/background.jpg");
+  background-size: cover;
   height: 100vh; }
 
 .headerNav {
@@ -437,7 +438,7 @@ h4 {
 
 @media (max-width: 660px) {
   .header {
-    background-size: cover; }
+    background-size: initial; }
   .--headerSize {
     font-size: 2.5rem; }
   .header {
