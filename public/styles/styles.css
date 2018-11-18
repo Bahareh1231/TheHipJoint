@@ -240,10 +240,7 @@ h4 {
 .header {
   background-image: url("/../assets/background.jpg");
   background-size: cover;
-  height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  overflow: hidden; }
+  height: 100vh; }
 
 .headerNav {
   padding: 25px 0 0 0;
@@ -560,6 +557,8 @@ h4 {
   position: relative;
   font-size: 1.2rem;
   padding-bottom: calc(20% - 20px); }
+  .teamImage:hover .skillsOverlay {
+    display: none; }
   .teamImage:hover .nameOverlay {
     display: block; }
   .teamImage img {
