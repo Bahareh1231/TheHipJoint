@@ -212,9 +212,9 @@
     .teamImage {
         width: calc(90% - 20px);
         padding-bottom: calc(90% - 20px);
-        &:hover .skillsOverlay {
-        display: block;
-    }
+        // &:hover .skillsOverlay {
+        // display: block;
+    // }
 }
 
     .imageOverlay {

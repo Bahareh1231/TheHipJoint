@@ -260,6 +260,11 @@
 }
 
 @media (max-width: 660px) {
+
+    .header {
+        height: 100vh;
+    }
+
     .--headerSize {
         font-size: 2.5rem;
     }

@@ -440,6 +440,8 @@ h4 {
     width: 32%; } }
 
 @media (max-width: 660px) {
+  .header {
+    height: 100vh; }
   .--headerSize {
     font-size: 2.5rem; }
   .header {
@@ -692,8 +694,6 @@ h4 {
   .teamImage {
     width: calc(90% - 20px);
     padding-bottom: calc(90% - 20px); }
-    .teamImage:hover .skillsOverlay {
-      display: block; }
   .imageOverlay p {
     font-size: 2rem; } }
 
