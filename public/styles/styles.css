@@ -239,7 +239,6 @@ h4 {
 
 .header {
   background-image: url("/../assets/background.jpg");
-  background-size: cover;
   height: 100vh; }
 
 .headerNav {
