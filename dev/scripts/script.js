@@ -209,7 +209,7 @@ app.submitForm = function() {
 
 }
  
-after_form_submitted = () => {
+let after_form_submitted = () => {
     console.log('form submitted');
     
 }
