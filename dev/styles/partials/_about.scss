@@ -26,15 +26,19 @@
     position: relative;
     font-size: 1.2rem;
     padding-bottom: calc(20% - 20px);
+    
+    img {
+        @include position (absolute, 0, 0, 0, 0);
+        z-index: 30;
+    }
+}
+
+.teamImageHover {
     &:hover .skillsOverlay {
         display: none;
     }
     &:hover .nameOverlay {
         display: block;
-    }
-    img {
-        @include position (absolute, 0, 0, 0, 0);
-        z-index: 30;
     }
 }
 
@@ -212,8 +216,8 @@
     .teamImage {
         width: calc(90% - 20px);
         padding-bottom: calc(90% - 20px);
-        // &:hover .skillsOverlay {
-        // display: block;
+    //     &:hover .skillsOverlay {
+    //     display: block;
     // }
 }
 

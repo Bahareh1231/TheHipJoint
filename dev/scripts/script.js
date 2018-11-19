@@ -13,62 +13,6 @@ $('a[href*="#"]').on('click', function (e) {
 
 const app = {}
 
-app.submitForm = function() {
-    $('#formBody').submit(function (e) {
-        e.preventDefault();
-
-        let $form = $(this);
-        //show some response on the button
-        $('button[type="submit"]', $form).each(function () {
-            let $btn = $(this);
-            $btn.prop('type', 'button');
-            $btn.prop('orig_label', $btn.text());
-            $btn.text('Sending ...');
-        });
-        after_form_submitted();
-
-        $.ajax({
-            type: "POST",
-            url: 'handler.php',
-            data: $form.serialize(),
-            success: after_form_submitted,
-            dataType: 'JSON'
-        });
-
-    });
-    
-}
-
-let after_form_submitted = function (data) {
-    console.log(data);
-    
-    // if (data.result == 'success') {
-    //     $('form#reused_form').hide();
-    //     $('#success_message').show();
-    //     $('#error_message').hide();
-    // }
-    // else {
-    //     $('#error_message').append('<ul></ul>');
-
-    //     jQuery.each(data.errors, function (key, val) {
-    //         $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
-    //     });
-    //     $('#success_message').hide();
-    //     $('#error_message').show();
-
-    //     //reverse the response on the button
-    //     $('button[type="button"]', $form).each(function () {
-    //         $btn = $(this);
-    //         label = $btn.prop('orig_label');
-    //         if (label) {
-    //             $btn.prop('type', 'submit');
-    //             $btn.text(label);
-    //             $btn.prop('orig_label', '');
-    //         }
-    //     });
-    // }// end of else
-}
-
 
 // scroll event 
 app.scrollingEvent = () => {
@@ -226,6 +170,21 @@ app.navAction = () => {
     })
 }
 
+// check if the device is a touch device, and add classes to the hover elements if it is not a touch device
+app.addHover = () => {
+
+    // check if browser doesnt' support touch
+    let touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+
+
+    if (!touchsupport) { // browser doesn't support touch
+        $('.teamImage').addClass('teamImageHover');
+        
+    }
+}
+ 
+
+
 app.init = () => {
     app.submitForm();
     app.scrollingEvent();
@@ -234,6 +193,7 @@ app.init = () => {
     app.viewTeam();
     app.navButton();
     app.navAction();
+    app.addHover();
 }
 
 $(function(){
@@ -242,5 +202,59 @@ $(function(){
 
         
 
-        
+        // app.submitForm = function() {
+//     $('#formBody').submit(function (e) {
+//         e.preventDefault();
+
+//         let $form = $(this);
+//         //show some response on the button
+//         $('button[type="submit"]', $form).each(function () {
+//             let $btn = $(this);
+//             $btn.prop('type', 'button');
+//             $btn.prop('orig_label', $btn.text());
+//             $btn.text('Sending ...');
+//         });
+//         after_form_submitted();
+
+//         $.ajax({
+//             type: "POST",
+//             url: 'handler.php',
+//             data: $form.serialize(),
+//             success: after_form_submitted,
+//             dataType: 'JSON'
+//         });
+
+//     });
+
+// }
+
+// let after_form_submitted = function (data) {
+//     console.log(data);
+
+    // if (data.result == 'success') {
+    //     $('form#reused_form').hide();
+    //     $('#success_message').show();
+    //     $('#error_message').hide();
+    // }
+    // else {
+    //     $('#error_message').append('<ul></ul>');
+
+    //     jQuery.each(data.errors, function (key, val) {
+    //         $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
+    //     });
+    //     $('#success_message').hide();
+    //     $('#error_message').show();
+
+    //     //reverse the response on the button
+    //     $('button[type="button"]', $form).each(function () {
+    //         $btn = $(this);
+    //         label = $btn.prop('orig_label');
+    //         if (label) {
+    //             $btn.prop('type', 'submit');
+    //             $btn.text(label);
+    //             $btn.prop('orig_label', '');
+    //         }
+    //     });
+    // }// end of else
+// }
  

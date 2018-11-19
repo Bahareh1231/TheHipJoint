@@ -1,26 +1,32 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-/*
-Tested working with PHP5.4 and above (including PHP 7 )
+<?php 
 
- */
-require_once './vendor/autoload.php';
+    $name = $_Post['name'];
+    $email = $_Post['email'];
+    $phoneNumber = $_Post['phone'];
+    $message = $_Post['message'];
+    $dayOfWeek = $_Post['dayOfWeek'];
+    $timeOfDay = $_Post['timeOfDay'];
 
-use FormGuide\Handlx\FormHandler;
+    $email_from = "bahareh.adham@gmail.com";
 
+    $email_subject = "New appointment submission";
+    
+    $email_body = "Patient: $name.\n".
+                    "Email: $email.\n".
+                    "Message: $message.\n".
+                    "Time of Day: $timeOfDay.\n";
 
-$pp = new FormHandler(); 
+    $to = "bahareh.adham@gmail.com";
 
-$validator = $pp->getValidator();
-$validator->fields(['name','email', 'phone'])->areRequired()->maxLength(50);
-$validator->field('email')->isEmail();
-$validator->field('message')->maxLength(8000);
+    $headers = "From: $email_from \r\n";
 
+    $headers .= "Reply-To $email \r\n";
 
+    mail($to,$email_subject,$email_body,$headers);
 
+    header("Location: ../index.html");
 
-$pp->sendEmailTo('bahareh.adham@gmail.com'); // ← Your email here
+    
+        
 
-echo $pp->process($_POST);
+?>
