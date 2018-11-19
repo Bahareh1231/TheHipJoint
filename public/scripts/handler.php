@@ -26,7 +26,4 @@
 
     header("Location: ../index.html");
 
-    
-        
-
 ?>

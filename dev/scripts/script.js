@@ -182,7 +182,37 @@ app.addHover = () => {
         
     }
 }
+
+app.submitForm = function() {
+    $('#formBody').submit(function (e) {
+        e.preventDefault();
+
+        let $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function () {
+            let $btn = $(this);
+            $btn.prop('type', 'button');
+            $btn.prop('orig_label', $btn.text());
+            $btn.text('Sending ...');
+        });
+        // after_form_submitted();
+
+        $.ajax({
+            type: "POST",
+            url: 'handler.php',
+            data: $form.serialize(),
+            success: after_form_submitted(),
+            dataType: 'JSON'
+        });
+
+    });
+
+}
  
+after_form_submitted = () => {
+    console.log('form submitted');
+    
+}
 
 
 app.init = () => {
@@ -202,31 +232,7 @@ $(function(){
 
         
 
-        // app.submitForm = function() {
-//     $('#formBody').submit(function (e) {
-//         e.preventDefault();
 
-//         let $form = $(this);
-//         //show some response on the button
-//         $('button[type="submit"]', $form).each(function () {
-//             let $btn = $(this);
-//             $btn.prop('type', 'button');
-//             $btn.prop('orig_label', $btn.text());
-//             $btn.text('Sending ...');
-//         });
-//         after_form_submitted();
-
-//         $.ajax({
-//             type: "POST",
-//             url: 'handler.php',
-//             data: $form.serialize(),
-//             success: after_form_submitted,
-//             dataType: 'JSON'
-//         });
-
-//     });
-
-// }
 
 // let after_form_submitted = function (data) {
 //     console.log(data);
