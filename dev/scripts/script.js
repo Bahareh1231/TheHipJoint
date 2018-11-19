@@ -216,7 +216,7 @@ let after_form_submitted = () => {
 
 
 app.init = () => {
-    app.submitForm();
+    // app.submitForm();
     app.scrollingEvent();
     app.headerTextEffect();
     app.scrollEffects();
