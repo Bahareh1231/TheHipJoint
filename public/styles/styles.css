@@ -476,6 +476,11 @@ h4 {
   .mobileNav {
     left: 0; } }
 
+.blogHeader {
+  height: 40vh;
+  background-position: bottom;
+  border-bottom: 10px solid #818181; }
+
 .servicesSection {
   padding-bottom: 10%; }
 
