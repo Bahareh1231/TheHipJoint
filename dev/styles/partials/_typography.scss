@@ -13,7 +13,8 @@ img {
     width: 100%;
 }
 
-input {
+input,
+textarea {
     border-radius: 0;
 }
 
@@ -41,6 +42,15 @@ h4 {
     font-size: 1.4rem;
     text-align: center;
 }
+
+.bookNow {
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.2s;
+    }
+}
+
+// font styles
 
 .--bodyFont {
     font-family: $bodyFont;
