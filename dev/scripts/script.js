@@ -1,3 +1,4 @@
+
 let scrolling = false;
 
 let previousScroll = 0;
@@ -185,8 +186,11 @@ app.addHover = () => {
 
 
 
-app.init = () => {
+// instaToken: '18895804.c0ad8de.68321fded22d4c52ad65fe3c43dd1cc1',
+    // instaID: 'c0ad8deb97c14b5e94a3ececcff05af4',
 
+
+app.init = () => {
     app.scrollingEvent();
     app.headerTextEffect();
     app.scrollEffects();
