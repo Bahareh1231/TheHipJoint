@@ -39,7 +39,7 @@
 </head>
 <body>
 
-    <header class="header mainHeader">
+    <header class="header">
         
 
         <!-- nav bar  -->
@@ -541,13 +541,17 @@
                         <div class="formOverlay"></div>
                         <!-- Form Started -->
                         <h4 class="--bodyFont">Send us a message!</h4>
-                        <form id="formBody" action="https://formspree.io/bahareh.adham@gmail.com" method="POST" class="formForm">
+                        <form id="formBody"  action="" method="POST" class="formForm" netlify netlify-honeypot="hobbies">
                             <div class="formQuestion --bodyFont --formSize">
                                 <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name"
                                     required>
                                 <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control"
                                     placeholder="Email" required>
                                 <input aria-label="enter your phone number" id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+
+                            <div class="hobbies visuallyhidden">
+                                <input name="hobbies" aria-hidden="true" type="text">
                             </div>
                     
                             <div class="formQuestion --bodyFont --formSize">
@@ -585,6 +589,10 @@
                             </div>
                         </form>
                         <!-- Form Ended -->
+
+                        <div class="formSubmitted hideForm">
+                            <p class="--white --headerFont thankYou">Thank You!</p>
+                        </div><!-- end of formSubmitted -->
                     
                     </div><!-- end of form-->
 
