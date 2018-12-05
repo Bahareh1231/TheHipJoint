@@ -185,6 +185,18 @@ app.addHover = () => {
 }
 
 
+app.formSubmit = () => {
+    $("#formBody").submit(function (e) {
+        e.preventDefault();
+
+        let $form = $('#formBody');
+        $.post($form.attr("action"), $form.serialize()).then(function () {
+            $('.formWrap').addClass('hideForm');
+            $('.formSubmitted').removeClass('hideForm')
+        });
+    });
+}
+
 
 // instaToken: '18895804.c0ad8de.68321fded22d4c52ad65fe3c43dd1cc1',
     // instaID: 'c0ad8deb97c14b5e94a3ececcff05af4',
@@ -198,6 +210,7 @@ app.init = () => {
     app.navButton();
     app.navAction();
     app.addHover();
+    app.formSubmit();
 }
 
 $(function(){

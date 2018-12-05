@@ -787,6 +787,11 @@ h4 {
     margin: 0;
     margin-bottom: 10px; }
 
+.thankYou {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold; }
+
 .formForm {
   display: flex;
   flex-wrap: wrap;
@@ -839,6 +844,9 @@ select {
   .button:hover, .button:focus {
     background-color: black;
     color: white; }
+
+.hideForm {
+  display: none; }
 
 .footer {
   background-color: black;

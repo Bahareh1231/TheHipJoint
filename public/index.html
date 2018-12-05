@@ -39,7 +39,7 @@
 </head>
 <body>
 
-    <header class="header mainHeader">
+    <header class="header">
         
 
         <!-- nav bar  -->
@@ -538,53 +538,62 @@
                     </div><!-- end of maps-->
 
                     <div class="form">
-                        <div class="formOverlay"></div>
-                        <!-- Form Started -->
-                        <h4 class="--bodyFont">Send us a message!</h4>
-                        <form id="formBody" action="https://formspree.io/bahareh.adham@gmail.com" method="POST" class="formForm">
-                            <div class="formQuestion --bodyFont --formSize">
-                                <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name"
-                                    required>
-                                <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control"
-                                    placeholder="Email" required>
-                                <input aria-label="enter your phone number" id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number">
-                            </div>
-                    
-                            <div class="formQuestion --bodyFont --formSize">
-                                <textarea aria-label="any additional messages" rows="4" type="text" id="message" resize="none" name="message" class="form-control"
-                                    placeholder="Additional notes"></textarea>
-                            </div><!-- end of message area-->
-                    
-                            <div class="checkBoxes">
-                                <!-- preferred day of the week -->
-                                <div class="formCheckbox --bodyFont --formSize">
-                                    <p class="--bodyFont">Preferred Day:</p>
-                                    <select name="dayOfWeek" id="" aria-label="select the day of the week you'd like to make an appointment for">
-                                        <option value="Monday">Monday</option>
-                                        <option value="Tuesday">Tuesday</option>
-                                        <option value="Wednesday">Wednesday</option>
-                                        <option value="Thursday">Thursday</option>
-                                        <option value="Friday">Friday</option>
-                                        <option value="Saturday">Saturday</option>
-                                    </select>
+                        <div class="formWrap ">
+                            <!-- Form Started -->
+                            <h4 class="--bodyFont">Send us a message!</h4>
+                            <form id="formBody" name="Appointment Request" action="" method="POST" class="formForm" netlify netlify-honeypot="hobbies">
+                                <div class="formQuestion --bodyFont --formSize">
+                                    <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name"
+                                        required>
+                                    <input aria-label="enter your email. this section is required" id="email" type="email" name="email" class="form-control"
+                                        placeholder="Email" required>
+                                    <input aria-label="enter your phone number" id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number">
                                 </div>
-                                <!-- preferred time of day -->
-                                <div class="formCheckbox --bodyFont --formSize">
-                                    <p class="--bodyFont">Preferred Time:</p>
-                                    <select name="timeOfDay" id="" aria-label="select the time of day you'd like to make an appointment for">
-                                        <option value="Morning">Morning 9:00am - 12:00pm</option>
-                                        <option value="Afternoon">Afternoon 12:00pm - 4:00pm</option>
-                                        <option value="Evening">Evening 4:00pm - 7:00pm</option>
-                                    </select>
-                                 
+
+                                <div class="hobbies visuallyhidden">
+                                    <input name="hobbies" aria-hidden="true" type="text">
                                 </div>
-                            </div><!-- end of checkBoxes-->                    
-                    
-                            <div class="form-group">
-                                <button class="button --bodyFont">Submit</button>
-                            </div>
-                        </form>
-                        <!-- Form Ended -->
+                        
+                                <div class="formQuestion --bodyFont --formSize">
+                                    <textarea aria-label="any additional messages" rows="4" type="text" id="message" resize="none" name="message" class="form-control"
+                                        placeholder="Additional notes"></textarea>
+                                </div><!-- end of message area-->
+                        
+                                <div class="checkBoxes">
+                                    <!-- preferred day of the week -->
+                                    <div class="formCheckbox --bodyFont --formSize">
+                                        <p class="--bodyFont">Preferred Day:</p>
+                                        <select name="dayOfWeek" id="" aria-label="select the day of the week you'd like to make an appointment for">
+                                            <option value="Monday">Monday</option>
+                                            <option value="Tuesday">Tuesday</option>
+                                            <option value="Wednesday">Wednesday</option>
+                                            <option value="Thursday">Thursday</option>
+                                            <option value="Friday">Friday</option>
+                                            <option value="Saturday">Saturday</option>
+                                        </select>
+                                    </div>
+                                    <!-- preferred time of day -->
+                                    <div class="formCheckbox --bodyFont --formSize">
+                                        <p class="--bodyFont">Preferred Time:</p>
+                                        <select name="timeOfDay" id="" aria-label="select the time of day you'd like to make an appointment for">
+                                            <option value="Morning">Morning 9:00am - 12:00pm</option>
+                                            <option value="Afternoon">Afternoon 12:00pm - 4:00pm</option>
+                                            <option value="Evening">Evening 4:00pm - 7:00pm</option>
+                                        </select>
+                                    
+                                    </div>
+                                </div><!-- end of checkBoxes-->                    
+                        
+                                <div class="form-group">
+                                    <button class="button --bodyFont">Submit</button>
+                                </div>
+                            </form>
+                            <!-- Form Ended -->
+                        </div><!-- end of formWrap-->
+
+                        <div class="formSubmitted hideForm">
+                            <p class="--white --bodyrFont thankYou">Thank You!</p>
+                        </div><!-- end of formSubmitted -->
                     
                     </div><!-- end of form-->
 

@@ -94,11 +94,12 @@
     }
 }
 
-// .formOverlay {
-//     @include position(absolute, 0, 0, 0, 0);
-//     background-color: rgba($color: #ffffff, $alpha: 0.9);
-//     z-index: 40;
-// }
+
+.thankYou {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .formForm {
     display: flex;
