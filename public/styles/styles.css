@@ -453,7 +453,8 @@ h4 {
     width: 44%;
     margin-left: 10px; }
   .overlayButton {
-    right: -14px; } }
+    right: 3px;
+    top: 0; } }
 
 @media (max-width: 500px) {
   .--headerSize {
