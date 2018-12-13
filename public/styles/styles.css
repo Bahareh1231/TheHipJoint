@@ -490,9 +490,12 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   padding-top: 30px; }
+  .instagram p {
+    font-size: 2rem;
+    padding: 7%; }
 
 .servicesSection {
   padding-bottom: 10%; }

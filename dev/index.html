@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- meta -->
         <meta name="image" content="/assets/logo.png">
@@ -92,12 +93,12 @@
 
                     <!-- CHIRO, PHYSIO, MASSAGE -->
                     <div class="serviceBlock leftalign">
-                        <div class="serviceText">
+                        <div class="serviceText" data-aos="fade-right" data-aos-once="false" data-aos-duration="1000" data-aos-mirror="true">
                             <p class=" --bodyFont --bodySize serviceName --bold">Chiropractic, Physiotherapy and Massage</p>
                             <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Chiropractors and Physiotherapists are specialists in the connection of your muscles, bones and joint to the nerves around
                             it. They work closely with our Registered Massage Therapists to get you moving and out of pain.</p>
                         </div><!-- end of serviceText-->
-                        <div class="serviceImage">
+                        <div class="serviceImage" data-aos="fade-left" data-aos-duration="1500" data-aos-once="false">
                             <img src="assets/massage.jpg" alt="A patient is laying face-down on a massage table. The therapist is using their hands to press down on either side of the patient's spine">
                         </div><!-- end of serviceImage-->
                     </div><!-- end of serviceBlock-->
@@ -105,10 +106,10 @@
 
                     <!-- ACUPUNTURE, LASER, ETC -->
                     <div class="serviceBlock rightalign">
-                        <div class="serviceImage">
+                        <div class="serviceImage" data-aos="fade-right" data-aos-once="false" data-aos-duration="1000" data-aos-mirror="true"">
                             <img src="assets/acu.jpg" alt="A close-up of a knee with acupunture needles just below the knee, on the calf">
                         </div><!-- end of serviceImage-->
-                        <div class="serviceText">
+                        <div class="serviceText" data-aos="fade-left" data-aos-duration="1500" data-aos-once="false">
                             <p class=" --bodyFont --bodySize serviceName --bold">Acupuncture, LASER, etc.</p>
                             <p class=" --bodyFont --bodySize --darkGrey serviceDescription">We have both Traditional Chinese Medicine and Biomedical
                             approaches available. LASER, when used at the right time, accelerates recovery. Cupping boosts your energy and increases muscle recovery.</p>
@@ -118,12 +119,12 @@
 
                     <!-- ORTHOTICS, STOCKINGS, TAPING -->
                     <div class="serviceBlock leftalign">
-                        <div class="serviceText">
+                        <div class="serviceText" data-aos="fade-right" data-aos-once="false" data-aos-duration="1000" data-aos-mirror="true">
                             <p class=" --bodyFont --bodySize serviceName --bold">Orthotics, Stockings, Taping</p>
                             <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Give yourself the home care advantage. Our orthotic insoles and compression stocking are custom. Taping can help to accelerate
                             recovery and your return to play.</p>
                         </div><!-- end of serviceText-->
-                        <div class="serviceImage">
+                        <div class="serviceImage" data-aos="fade-left" data-aos-duration="1500" data-aos-once="false">
                             <img src="assets/tape.jpg" alt="A patient is laying down on a massage table, and you can only see their back. The therapist is placing blue athelic tape length-wise on either side of their spine.">
                         </div><!-- end of serviceImage-->
                     </div><!-- end of serviceBlock-->
@@ -131,10 +132,10 @@
 
                     <!-- NUTRITION -->
                     <div class="serviceBlock rightalign">
-                        <div class="serviceImage">
+                        <div class="serviceImage" data-aos="fade-right" data-aos-once="false" data-aos-duration="1000" data-aos-mirror="true">
                             <img src="assets/nutrition.jpg" alt="A shot of produce at a grocery store, with the focus on the tomatos.">
                         </div><!-- end of serviceImage-->
-                        <div class="serviceText">
+                        <div class="serviceText" data-aos="fade-left" data-aos-duration="1500" data-aos-once="false">
                             <p class=" --bodyFont --bodySize serviceName --bold">Nutrition</p>
                             <p class=" --bodyFont --bodySize --darkGrey serviceDescription">Our nutrition and supplementation specialists will assess
                             your health holistically and personally guide you through your nutritional plan. We also carry a number of reliable nutritional supplement products.</p>
@@ -158,18 +159,18 @@
                     <div class="aboutText">
                         <h3 class="--bodyFont">Our Vision</h3>
                         <div class="visionBlocks">
-                            <div class="visionText">
+                            <div class="visionText" data-aos="fade-down">
                                 <p class="--bodyFont --bodySize --bold">Knowledge is power</p>
                                 <p class="--bodyFont --bodySize --darkGrey">Our practitioners have a wealth of knowledge and a generous heart.
                                     They love educating patients on the source of their symptoms and ways to prevent injury from occurring.</p>
                             </div>
-                            <div class="visionText">
+                            <div class="visionText" data-aos="fade-down" data-aos-delay="100">
                                 <p class="--bodyFont --bodySize --bold">Manual therapy is an art</p>
                                 <p class="--bodyFont --bodySize --darkGrey">Therapy is most effective if the correct tissue/joint is targeted
                                     properly. Our practitioners know the right amount of pressure, the ideal direction and best position
                                     with the rest of the body.</p>
                             </div>
-                            <div class="visionText">
+                            <div class="visionText" data-aos="fade-down" data-aos-delay="200" >
                                 <p class="--bodyFont --bodySize --bold">Fine Tuning the Body</p>
                                 <p class="--bodyFont --bodySize --darkGrey">Many performing artists are perfectionists in their craft. Our
                                     practitioners use their skills to help them to optimize a players's movement.</p>
@@ -540,7 +541,7 @@
                     <div class="form">
                         <div class="formWrap ">
                             <!-- Form Started -->
-                            <h4 class="--bodyFont">Send us a message!</h4>
+                            <h4 class="--bodyFont">Let's get in touch!</h4>
                             <form id="formBody" name="Appointment Request" action="" method="POST" class="formForm" netlify netlify-honeypot="hobbies">
                                 <div class="formQuestion --bodyFont --formSize">
                                     <input aria-label="enter your name. this section is required" id="name" type="text" name="name" class="form-control" placeholder="Name"
@@ -625,6 +626,7 @@
     </footer>
 
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="scripts/script.js"></script>
 
     <!-- 'book now' widget -->
