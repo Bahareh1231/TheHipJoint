@@ -505,7 +505,8 @@ h4 {
   flex-direction: column; }
 
 .serviceBlock {
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
 
 .rightalign {
   justify-content: flex-end; }
