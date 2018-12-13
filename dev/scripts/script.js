@@ -214,5 +214,6 @@ app.init = () => {
 }
 
 $(function(){
-    app.init()
+    app.init();
+    AOS.init();
 })
