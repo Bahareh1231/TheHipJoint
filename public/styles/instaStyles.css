@@ -1,0 +1,4 @@
+#tap2shop_widget .tap2shop_frame ul .tap2shop_photo_block {
+    margin-right: 10px;
+    width: calc(33.33px - 10px);
+}

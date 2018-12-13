@@ -11,14 +11,17 @@
     background-color: rgb(233, 233, 233);
 }
 
+.instaWrap {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
 .instagram {
     @include display (flex, center, center);
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 30px;
-    p {
-        font-size: 2rem;
-        padding: 7%;
-    }
+    
 }
 
