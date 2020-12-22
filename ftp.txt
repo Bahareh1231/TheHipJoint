@@ -1,0 +1,20 @@
+FTP HIP JOINT
+
+FTP Server/Host: 96.125.160.16
+Username: thehipj1
+Password: !@#Hip123
+Port: 21
+
+
+>Go to edit.
+>Then select settings.
+>Change timeout from 20 to 100
+>Then go to file.
+>select sitemanager.
+>At left bottom click on new site.
+>The at right top under general tab, enter host and port as I mentioned just above.
+>Select protocol as FTP.
+>Use encryption as : Use plain FTP
+>Then select logon type as normal.
+>Then enter all the details
+>Then click on connect.

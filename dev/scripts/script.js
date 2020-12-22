@@ -190,16 +190,26 @@ app.formSubmit = () => {
         e.preventDefault();
 
         let $form = $('#formBody');
-        $.post($form.attr("action"), $form.serialize()).then(function () {
+        $.post($form.attr("action"), $form.serialize());
+  
+        $('.formWrap').css('opacity', '0');
+        setTimeout(() => {
             $('.formWrap').addClass('hideForm');
-            $('.formSubmitted').removeClass('hideForm')
-        });
+            $('.formSubmitted').removeClass('hideForm').css('opacity', '1');
+        },500);
+        
     });
 }
 
+app.closeCovid = () => {
+    $('.closeOverlay').on('click', function(e) {
+        e.preventDefault();
+        $('body').css('overflow', 'scroll');
+        $('.covidOverlay').fadeOut();
+    })
+}
 
-// instaToken: '18895804.c0ad8de.68321fded22d4c52ad65fe3c43dd1cc1',
-    // instaID: 'c0ad8deb97c14b5e94a3ececcff05af4',
+
 
 
 app.init = () => {
@@ -211,6 +221,7 @@ app.init = () => {
     app.navAction();
     app.addHover();
     app.formSubmit();
+    app.closeCovid();
 }
 
 $(function(){

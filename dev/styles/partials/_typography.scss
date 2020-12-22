@@ -1,6 +1,7 @@
 html {
     font-size: 16px;
     letter-spacing: 0.6px;
+    font-family: $bodyFont;
 }
 
 .wrapper {
@@ -11,6 +12,12 @@ html {
 
 img {
     width: 100%;
+}
+
+a {
+    &:focus {
+        outline: 0;
+    }
 }
 
 input,
@@ -60,6 +67,10 @@ h4 {
     font-weight: 700;
 }
 
+.--underline {
+    text-decoration: underline;
+}
+
 //font colors
 .--grey {
     color: $grey;
@@ -82,11 +93,11 @@ h4 {
 }
 
 .--green {
-    color: $green;
+    color: $aliona;
 }
 
 .--pink {
-    color: $pink;
+    color: $tara;
 }
 
 // font sizes
@@ -103,7 +114,7 @@ h4 {
 }
 
 .--bodySize {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .--subHeaderSize {

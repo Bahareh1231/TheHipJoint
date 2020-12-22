@@ -12,13 +12,19 @@
 .serviceBlock {
     display: flex;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .rightalign {
     justify-content: flex-end;
     .serviceName {
         text-align: left;
+        
     }
+}
+
+.serviceName {
+    margin-top: 0;
 }
 
 .leftalign {
@@ -30,19 +36,22 @@
 .serviceImage {
     width: calc(33% - 40px);
     margin: 20px;
-    border-radius: 50%;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    // border-radius: 50%;
+    // overflow: hidden;
     position: relative;
-    padding-bottom: calc(33% - 40px);
-    img {
-        @include position(absolute, 0, 0, 0, 0);
-    }
+    // padding-bottom: calc(33% - 40px);
+    // img {
+        
+    //     @include position(absolute, 0, 0, 0, 0);
+    // }
 }
 
 .serviceText {
     width: calc(60% - 40px);
     margin: 20px;
-    @include display (flex, center, initial);
+    @include display (flex, initial, initial);
     flex-direction: column;
 }
 
@@ -77,7 +86,6 @@
     }
 
     .serviceImage {
-        width: 40%;
-        padding-bottom: 40%;
+        width: 63%;
     }
 }

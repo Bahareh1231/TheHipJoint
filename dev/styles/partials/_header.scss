@@ -64,8 +64,7 @@
     height: 100%;
     @include display(flex, initial, center);
     transition: all 0.5s;
-    &:hover,
-    &:focus {
+    &:hover {
         transform: translateY(7px);
         color: $grey;
     }

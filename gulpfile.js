@@ -7,12 +7,12 @@ const buffer = require('vinyl-buffer');
 const notify = require('gulp-notify');;
 const browserSync = require('browser-sync')
 const reload = browserSync.reload;
-const uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
-const useref = require('gulp-useref');
-const gulpIf = require('gulp-if');
-// const cssnano = require('gulp-cssnano');
-const imagemin = require('gulp-imagemin');
+// const uglify = require('gulp-uglify');
+// const babel = require('gulp-babel');
+// const useref = require('gulp-useref');
+// const gulpIf = require('gulp-if');
+// // const cssnano = require('gulp-cssnano');
+// const imagemin = require('gulp-imagemin');
 
 // watchers 
 
@@ -23,9 +23,9 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('./public/styles'))
         .pipe(reload({ stream: true }))
         .on('error', notify.onError({
-        message: "Error: <%= error.message %>",
-        title: 'Error in CSS 💩'
-    }));
+            message: "Error: <%= error.message %>",
+            title: 'Error in CSS 💩'
+        }));
 });
 
 gulp.task('js', () => {
@@ -53,13 +53,14 @@ gulp.task('html', () => {
 });
 
 
-gulp.task('bs', () => {
+gulp.task('bs', function () {
     browserSync.init({
         server: {
-            baseDir: './public/'
+            baseDir: "./public"
         }
-    })
-})
+    });
+});
+
 
 
 gulp.task('watch', () => {

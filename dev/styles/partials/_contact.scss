@@ -94,6 +94,15 @@
     }
 }
 
+.formWrap,
+.formSubmitted {
+    transition: all 0.3s;
+}
+
+.formSubmitted {
+    opacity: 0;
+}
+
 
 .thankYou {
     text-align: center;
